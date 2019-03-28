@@ -1,0 +1,41 @@
+body{
+  background: #ffdbcc;
+  font-family: arial;
+}
+
+a{
+  text-decoration: none;
+}
+
+h1{
+  text-align: center;
+}
+
+.links{
+  list-style: none;
+}
+
+.main{
+  width: 80%;
+  margin: auto;
+}
+
+.main table{
+  width: 50%;
+  border: 1px solid;
+}
+
+header{
+  text-align: center;
+  margin-top: 5%;
+}
+
+.pic{
+  width: 20%;
+  margin: auto;
+  border-radius: 50%;
+}
+
+header ul{
+  padding: 0;
+}
