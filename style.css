@@ -1,23 +1,76 @@
 body{
-  background: #ffdbcc;
+  margin: 0;
+  padding: 0;
   font-family: arial;
 }
 
-a{
+header{
+  width: 100%;
+  height: 20%;
+}
+
+header h3, header a{
+  display: inline-block;
+  color: #182153;
+  margin-right: 900px;
+}
+
+header h3{
+  font-size: 20px;
+  text-transform: capitalize;
+  margin-left: 40px;
+}
+
+header a{
+  display: inline-block;
+  line-height: 90px;
+  margin-right: 40px;
+  font-size: 14px;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
-h1{
-  text-align: center;
+.background-pic{
+  background-image: url(computer.jpg);
+  padding-top: 180px;
+  align-items: flex-end;
 }
 
-.links{
-  list-style: none;
+section .background-info{
+  position: absolute;
+  z-index: -1;
 }
 
-.main{
-  width: 80%;
+.profile{
+  width: 60%;
   margin: auto;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.profile .profile-pic, .profile .profile-info{
+  width: 50%;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.profile .profile-pic{
+  float: left;
+}
+
+.profile .profile-info{
+  float: right;
+  padding: 40px 80px;
+  background-color: #fff;
+}
+
+.profile ul{
+  list-style: none;
+  padding: 0;
+}
+
+.profile li{
+  margin-bottom: 25px;
 }
 
 .main table{
@@ -25,17 +78,9 @@ h1{
   border: 1px solid;
 }
 
-header{
-  text-align: center;
-  margin-top: 5%;
-}
-
 .pic{
-  width: 20%;
-  margin: auto;
-  border-radius: 50%;
-}
-
-header ul{
-  padding: 0;
+  width: 100%;
+  height: 100%
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
