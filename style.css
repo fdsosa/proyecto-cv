@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Assistant:300|Roboto|Nunito');
+
 body{
   margin: 0;
   padding: 0;
@@ -5,8 +7,24 @@ body{
 }
 
 header{
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 15vh;
+  height: 13vh;
+  background: #fff;
+  z-index: 10;
+  justify-content: center
+}
+
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky{
+  padding-top: 102px;
 }
 
 header h3, header a{
@@ -15,7 +33,8 @@ header h3, header a{
 }
 
 header h3{
-  font-size: 20px;
+  font-family: 'Assistant', sans-serif;
+  font-size: 27px;
   text-transform: capitalize;
   margin-left: 40px;
 }
@@ -27,8 +46,9 @@ header h3{
 
 header a{
   display: inline-block;
-  line-height: 90px;
+  line-height: 13vh;
   margin-right: 40px;
+  font-family: 'Nunito', sans-serif;
   font-size: 14px;
   text-decoration: none;
   text-transform: uppercase;
@@ -37,18 +57,22 @@ header a{
 .background-pic{
   background-image: url(computer.jpg);
   width: 100%;
-  height: 85vh;
+  height: 90vh;
+  margin-top: 13vh;
   overflow: hidden;
+  position: relative;
 }
 
 
 .profile{
-  position: absolute;
-  left: 50vw;
-  bottom: 0;
   width: 60%;
+  height: 40%;
   margin: auto;
   background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(0, -50%);
 }
 
 .profile .profile-pic, .profile .profile-info{
@@ -65,10 +89,27 @@ header a{
   float: right;
   padding: 40px 80px;
   background-color: #fff;
+  height: 200%;
+  color: #182153;
+}
+
+.profile-info h1{
+  font-family: 'Assistant', sans-serif;
+  font-size: 29px;
+  margin-bottom: 5px;
+}
+
+.profile-info h4{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-top: 0;
 }
 
 .profile ul{
   list-style: none;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
   padding: 0;
 }
 
@@ -86,4 +127,29 @@ header a{
   height: 100%
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
+}
+
+.social-bar{
+  width: 60%;
+  height: 20%;
+  margin: auto;
+  background-color: #182153;
+}
+
+.social-bar ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.social-bar ul li{
+  margin: 20px 10px;
+}
+
+.social-bar ul li a{
+  text-decoration: none;
+  padding: 5px 15px;
+  font-size: 20px;
+  color: #fff;
 }
