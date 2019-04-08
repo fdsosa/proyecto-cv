@@ -131,7 +131,7 @@ header a{
 
 .social-bar{
   width: 60%;
-  height: 20%;
+  height: 8vh;
   margin: auto;
   background-color: #182153;
 }
@@ -152,4 +152,20 @@ header a{
   padding: 5px 15px;
   font-size: 20px;
   color: #fff;
+}
+
+
+.presentation{
+  background-color: #F1F1F1;
+}
+
+.text-present{
+  text-align: center;
+  padding: 100px 32%;
+  font-family: 'Nunito', sans-serif;
+}
+
+.skills{
+  width: 100%;
+  background-color: white;
 }
