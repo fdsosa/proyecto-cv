@@ -16,8 +16,8 @@
         <h3>Federico Sosa</h3>
         <div class="links">
           <a href="">Home</a>
-          <a href="">About</a>
-          <a href="">Skills</a>
+          <a href="">Portfolio</a>
+          <a href="#skill">Skills</a>
           <a href="">Contact</a>
         </div>
         </ul>
@@ -64,50 +64,68 @@
       </div>
     </section>
 
-    <section class="skills">
+    <section class="skills" id="skill">
       <h2>Skills</h2>
-    </section>
-    <!--
+      <hr class="line_skills">
       <table>
-        <caption>
-          <h3>Mis Habilidades</h3>
-        </caption>
         <thead>
           <tr>
-            <th>Materia</th>
-            <th>Nivel de Desempeño</th>
+            <th>Subject</th>
+            <th>Progress </th>
           </tr>
         </thead>
         <tfoot>
           <tr>
             <td>Git</td>
-            <td><progress max="100" value="100"></progress></td>
+            <td class="cell-progress"><progress max="100" value="60"></progress></td>
           </tr>
           <tr>
             <td>HTML</td>
-            <td><progress max="100" value="100"></progress></td>
+            <td class="cell-progress"><progress max="100" value="80"></progress></td>
           </tr>
           <tr>
             <td>CSS</td>
-            <td><progress max="100" value="100"></progress></td>
+            <td class="cell-progress"><progress max="100" value="74"></progress></td>
           </tr>
           <tr>
             <td>JS</td>
-            <td><progress max="100" value="100"></progress></td>
+            <td class="cell-progress"><progress max="100" value="48"></progress></td>
           </tr>
           <tr>
             <td>PHP</td>
-            <td><progress max="100" value="90"></progress></td>
+            <td class="cell-progress"><progress max="100" value="56"></progress></td>
           </tr>
           <tr>
-            <td>BASE DE DATOS</td>
-            <td><progress max="100" value="100"></progress></td>
+            <td>MySQL</td>
+            <td class="cell-progress"><progress max="100" value="71"></progress></td>
           </tr>
           <tr>
-            <td>INGLES</td>
-            <td><progress max="100" value="100"></progress></td>
+            <td>English</td>
+            <td class="cell-progress"><progress max="100" value="80"></progress></td>
           </tr>
         </tfoot>
-      </table> -->
+      </table>
+    </section>
+
+    <section class="contact">
+      <h2>Contact Me</h2>
+      <hr>
+      <div class="left">
+        <form class="" action="index.html" method="post">
+          <div class="half">
+            <input type="text" name="name" placeholder="Name"><br>
+          </div>
+          <div class="half">
+            <input type="text" name="email" placeholder="Email"><br>
+          </div>
+          <input type="text" name="subject" placeholder="Subject"><br>
+          <input type="text" name="message" placeholder="Message"><br>
+          <button type="button" onclick="alert('Hello World!')">Submit</button>
+        </form>
+      </div>
+      <div class="right">
+
+      </div>
+    </section>
   </body>
 </html>

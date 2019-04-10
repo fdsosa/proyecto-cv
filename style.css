@@ -117,11 +117,6 @@ header a{
   margin-bottom: 25px;
 }
 
-.main table{
-  width: 50%;
-  border: 1px solid;
-}
-
 .pic{
   width: 100%;
   height: 100%
@@ -168,4 +163,102 @@ header a{
 .skills{
   width: 100%;
   background-color: white;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+}
+
+.skills h2{
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+
+.line_skills{
+  display: block;
+  width: 100%;
+  border-style: inset;
+  border-width: 0.5px;
+}
+
+table{
+  width: 60%;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+table td{
+  width: 10%;
+}
+
+table th{
+  height: 30px;
+  text-transform: uppercase;
+}
+
+table th, td{
+  padding: 17px;
+}
+
+progress{
+  width: 100%;
+  height: 25px;
+  -webkit-appearance: none;
+}
+
+.cell-progress{
+  width: 30%;
+}
+
+progress[value]::-webkit-progress-bar{
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: #182153;
+  -webkit-appearance: none;
+  border-radius: 8px;
+}
+
+.contact{
+  padding: 20px 0;
+  width: 100%;
+  background-color: #F1F1F1;
+}
+
+.contact h2{
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Nunito', sans-serif;
+}
+
+.contact hr{
+  display: block;
+  width: 100%;
+  border-style: inset;
+  border-width: 1px;
+  background-color: white;
+  color: white;
+}
+
+.contact .left{
+  padding: 50px;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.contact .left form{
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+input[type=text]:hover{
+  background-color: #DCE6EF;
 }
