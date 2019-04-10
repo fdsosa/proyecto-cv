@@ -236,27 +236,52 @@ progress[value]::-webkit-progress-value {
 .contact hr{
   display: block;
   width: 100%;
-  border-style: inset;
-  border-width: 1px;
-  background-color: white;
-  color: white;
+  border-style: solid;
+  border-width: 0.8px;
+  border-color: white;
+}
+
+.contact .left, .contact .right{
+  display: inline-block;
+  background-color: #F1F1F1;
 }
 
 .contact .left{
   padding: 50px;
   width: 50%;
   box-sizing: border-box;
+  float: left;
+  border-right: solid 0.8px white;
+}
+
+.contact .right{
+  padding: 50px;
+  width: 50%;
+  box-sizing: border-box;
+  float: right;
 }
 
 .contact .left form{
+  text-align: right;
+}
+
+.contact .left button{
+  width: 60%;
+  padding: 15px 30px;
+  border: none;
+  background-color: #182153;
+  color: #FFF;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
 }
 
 input[type=text] {
-  width: 100%;
+  width: 60%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
   border: none;
+  font-family: 'Nunito', sans-serif;
 }
 
 input[type=text]:hover{
