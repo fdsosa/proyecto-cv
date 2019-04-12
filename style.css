@@ -19,17 +19,6 @@ header{
   height: 13vh;
   background: #fff;
   z-index: 10;
-  justify-content: center
-}
-
-.sticky{
-  position: fixed;
-  top: 0;
-  width: 100%
-}
-
-.sticky{
-  padding-top: 102px;
 }
 
 header h3, header a{
@@ -41,26 +30,41 @@ header h3{
   font-family: 'Assistant', sans-serif;
   font-size: 27px;
   text-transform: capitalize;
-  margin-left: 40px;
 }
 
 .links{
-  display: inline-block;
-  margin-left: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 header a{
   display: inline-block;
-  line-height: 13vh;
-  margin-right: 40px;
   font-family: 'Nunito', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
+  box-sizing: border-box;
+  padding: 0 30px;
+}
+
+header nav{
+  display: flex;
+  align-items: center;
+}
+
+header .title{
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  padding-left: 30px;
+  box-sizing: border-box;
 }
 
 .background-pic{
   background-image: url(computer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 90vh;
   margin-top: 13vh;
