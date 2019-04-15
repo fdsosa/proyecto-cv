@@ -1,12 +1,26 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Assistant:300|Roboto|Nunito');
+
+/* BODY TAGS */
 body{
   margin: 0;
   padding: 0;
-  font-family: arial;
+  font-family: arial
+}
+
+img{
+  margin: 0;
+  display: block;
 }
 
 header{
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 15vh;
+  height: 13vh;
+  background: #fff;
+  z-index: 10;
 }
 
 header h3, header a{
@@ -15,60 +29,109 @@ header h3, header a{
 }
 
 header h3{
-  font-size: 20px;
+  font-family: 'Assistant', sans-serif;
+  font-size: 27px;
   text-transform: capitalize;
-  margin-left: 40px;
 }
 
 .links{
-  display: inline-block;
-  margin-left: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 header a{
   display: inline-block;
-  line-height: 90px;
-  margin-right: 40px;
-  font-size: 14px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
+  box-sizing: border-box;
+  padding: 0 30px;
+}
+
+header nav{
+  display: flex;
+  align-items: center;
+}
+
+header .title{
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  padding-left: 30px;
+  box-sizing: border-box;
 }
 
 .background-pic{
   background-image: url(computer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
-  height: 85vh;
+  height: 90vh;
+  margin-top: 13vh;
   overflow: hidden;
+  position: relative;
 }
 
 
 .profile{
-  position: absolute;
-  left: 50vw;
-  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  flex-flow: row;
   width: 60%;
+  height: 100%;
   margin: auto;
-  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(0, -50%);
 }
 
 .profile .profile-pic, .profile .profile-info{
-  width: 50%;
   box-sizing: border-box;
   display: inline-block;
+  height: 70%;
+  flex: 1;
+  flex-grow: 1;
 }
 
 .profile .profile-pic{
-  float: left;
+}
+
+.profile .profile-pic img{
+  width: 100%;
+  height: 100%;
 }
 
 .profile .profile-info{
-  float: right;
-  padding: 40px 80px;
   background-color: #fff;
+  color: #182153;
+  display: flex;
+  align-items: center;
+}
+
+.profile .profile-info .content-info{
+  padding-left: 70px;
+}
+
+.profile-info h1{
+  font-family: 'Assistant', sans-serif;
+  font-size: 29px;
+  margin-bottom: 5px;
+}
+
+.profile-info h4{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-top: 0;
 }
 
 .profile ul{
   list-style: none;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
   padding: 0;
 }
 
@@ -76,14 +139,177 @@ header a{
   margin-bottom: 25px;
 }
 
-.main table{
-  width: 50%;
-  border: 1px solid;
-}
-
 .pic{
   width: 100%;
   height: 100%
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
+}
+
+.social-bar{
+  width: 60%;
+  height: 8vh;
+  margin: auto;
+  background-color: #182153;
+}
+
+.social-bar ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.social-bar ul li{
+  margin: 20px 10px;
+}
+
+.social-bar ul li a{
+  text-decoration: none;
+  padding: 5px 15px;
+  font-size: 20px;
+  color: #fff;
+}
+
+
+.presentation{
+  background-color: #F1F1F1;
+}
+
+.text-present{
+  text-align: center;
+  padding: 100px 32%;
+  font-family: 'Nunito', sans-serif;
+}
+
+.skills{
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+}
+
+.skills h2{
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+
+.line_skills{
+  display: block;
+  width: 100%;
+  border-style: inset;
+  border-width: 0.5px;
+}
+
+table{
+  width: 60%;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+table td{
+  width: 10%;
+}
+
+table th{
+  height: 30px;
+  text-transform: uppercase;
+}
+
+table th, td{
+  padding: 17px;
+}
+
+progress{
+  width: 100%;
+  height: 25px;
+  -webkit-appearance: none;
+}
+
+.cell-progress{
+  width: 30%;
+}
+
+progress[value]::-webkit-progress-bar{
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: #182153;
+  -webkit-appearance: none;
+  border-radius: 8px;
+}
+
+.contact{
+  padding: 20px 0;
+  width: 100%;
+  background-color: #F1F1F1;
+}
+
+.contact h2{
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Nunito', sans-serif;
+}
+
+.contact hr{
+  display: block;
+  width: 100%;
+  border-style: solid;
+  border-width: 0.8px;
+  border-color: white;
+}
+
+.contact .left, .contact .right{
+  display: inline-block;
+  background-color: #F1F1F1;
+}
+
+.contact .left{
+  padding: 50px;
+  width: 50%;
+  box-sizing: border-box;
+  float: left;
+  border-right: solid 0.8px white;
+}
+
+.contact .right{
+  padding: 50px;
+  width: 50%;
+  box-sizing: border-box;
+  float: right;
+}
+
+.contact .left form{
+  text-align: right;
+}
+
+.contact .left button{
+  width: 60%;
+  padding: 15px 30px;
+  border: none;
+  background-color: #182153;
+  color: #FFF;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+input[type=text] {
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  font-family: 'Nunito', sans-serif;
+}
+
+input[type=text]:hover{
+  background-color: #DCE6EF;
+}
+
+.contact .right h2{
+  text-align: left;
 }

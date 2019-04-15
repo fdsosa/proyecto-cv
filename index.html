@@ -6,16 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mi web personal - Federico Sosa</title>
     <link rel="stylesheet" href="style.css">
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d">
+    <script type="text/javascript" src="function.js"></script>
   </head>
   <body>
-    <header>
+    <header id="header">
       <nav>
-        <h3>Federico Sosa</h3>
+        <div class="title">
+          <h3>Federico Sosa</h3>
+        </div>
         <div class="links">
           <a href="">Home</a>
-          <a href="">About</a>
-          <a href="">Skills</a>
-          <a href="">Contact</a>
+          <a href="">Portfolio</a>
+          <a href="#skillsSection">Skills</a>
+          <a href="#contactSection">Contact</a>
         </div>
         </ul>
       </nav>
@@ -27,7 +32,104 @@
           <img class="pic" src="profile-pic.jpg" alt="Foto de Perfil">
         </section>
         <section class="profile-info">
-          <h1>Federico Sosa</h1>
+          <div class="content-info">
+            <h1>Federico Sosa</h1>
+            <h4>Web Developer</h4>
+            <ul>
+              <li><b>Phone:</b><br>+598 95683920</li>
+              <li><b>Email:</b><br>fdsosa.35@gmail.com</li>
+              <li><b>Date of Birth:</b><br>April 28th, 1999</li>
+            </ul>
+            </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="presentation">
+      <div class="social-bar">
+        <ul>
+          <li>
+            <a href=""><span class="socicon-linkedin"></span></a>
+          </li>
+          <li>
+            <a href=""><span class="socicon-facebook"></span></a>
+          </li>
+          <li>
+            <a href=""><span class="socicon-github"></span></a>
+          </li>
+          <li>
+            <a href=""><span class="socicon-youtube"></span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="text-present">
+        <h2>Hi I´m Federico</h2>
+        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero cupiditate modi delectus numquam veniam dolorem minus minima illum enim quidem vel, rerum possimus ipsa, harum corporis. Quasi perspiciatis, possimus. Dolorum!</span>
+      </div>
+    </section>
+
+    <section class="skills" id="skillsSection">
+      <h2>Skills</h2>
+      <hr class="line_skills">
+      <table>
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Progress </th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <td>Git</td>
+            <td class="cell-progress"><progress max="100" value="60"></progress></td>
+          </tr>
+          <tr>
+            <td>HTML</td>
+            <td class="cell-progress"><progress max="100" value="80"></progress></td>
+          </tr>
+          <tr>
+            <td>CSS</td>
+            <td class="cell-progress"><progress max="100" value="74"></progress></td>
+          </tr>
+          <tr>
+            <td>JS</td>
+            <td class="cell-progress"><progress max="100" value="48"></progress></td>
+          </tr>
+          <tr>
+            <td>PHP</td>
+            <td class="cell-progress"><progress max="100" value="56"></progress></td>
+          </tr>
+          <tr>
+            <td>MySQL</td>
+            <td class="cell-progress"><progress max="100" value="71"></progress></td>
+          </tr>
+          <tr>
+            <td>English</td>
+            <td class="cell-progress"><progress max="100" value="80"></progress></td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <section class="contact" id="contactSection">
+      <h2>Contact Me</h2>
+      <hr>
+      <div class="left">
+        <form class="" action="index.html" method="post">
+          <div class="half">
+            <input type="text" name="name" placeholder="Name"><br>
+          </div>
+          <div class="half">
+            <input type="text" name="email" placeholder="Email"><br>
+          </div>
+          <input type="text" name="subject" placeholder="Subject"><br>
+          <input type="text" name="message" placeholder="Message"><br>
+          <button type="button" onclick="alert('Hello World!')">Submit</button>
+        </form>
+      </div>
+      <div class="right">
+        <section class="">
+          <h2>Federico Sos</h1>
           <h4>Web Developer</h4>
           <ul>
             <li><b>Phone:</b><br>+598 95683920</li>
@@ -37,47 +139,5 @@
         </section>
       </div>
     </section>
-<!--
-      <table>
-        <caption>
-          <h3>Mis Habilidades</h3>
-        </caption>
-        <thead>
-          <tr>
-            <th>Materia</th>
-            <th>Nivel de Desempeño</th>
-          </tr>
-        </thead>
-        <tfoot>
-          <tr>
-            <td>Git</td>
-            <td><progress max="100" value="100"></progress></td>
-          </tr>
-          <tr>
-            <td>HTML</td>
-            <td><progress max="100" value="100"></progress></td>
-          </tr>
-          <tr>
-            <td>CSS</td>
-            <td><progress max="100" value="100"></progress></td>
-          </tr>
-          <tr>
-            <td>JS</td>
-            <td><progress max="100" value="100"></progress></td>
-          </tr>
-          <tr>
-            <td>PHP</td>
-            <td><progress max="100" value="90"></progress></td>
-          </tr>
-          <tr>
-            <td>BASE DE DATOS</td>
-            <td><progress max="100" value="100"></progress></td>
-          </tr>
-          <tr>
-            <td>INGLES</td>
-            <td><progress max="100" value="100"></progress></td>
-          </tr>
-        </tfoot>
-      </table> -->
   </body>
 </html>
