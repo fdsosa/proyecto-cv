@@ -1,5 +1,5 @@
 /* FONTS */
-@import url('https://fonts.googleapis.com/css?family=Assistant:300|Roboto|Nunito');
+@import url('https://fonts.googleapis.com/css?family=Assistant:300|Roboto|Lato:300|Nunito');
 
 /* BODY TAGS */
 body{
@@ -13,6 +13,15 @@ img{
   display: block;
 }
 
+h1, h2, h3, h4, li, p{
+  color: #182153;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* HEADER SECTION */
 header{
   position: fixed;
   top: 0;
@@ -44,7 +53,6 @@ header a{
   display: inline-block;
   font-family: 'Nunito', sans-serif;
   font-size: 16px;
-  text-decoration: none;
   text-transform: uppercase;
   box-sizing: border-box;
   padding: 0 30px;
@@ -63,6 +71,7 @@ header .title{
   box-sizing: border-box;
 }
 
+/* PROFILE SECTION */
 .background-pic{
   background-image: url(computer.jpg);
   background-repeat: no-repeat;
@@ -146,6 +155,7 @@ header .title{
   filter: grayscale(100%);
 }
 
+/* SOCIAL BAR SECTION */
 .social-bar{
   width: 60%;
   height: 8vh;
@@ -165,13 +175,12 @@ header .title{
 }
 
 .social-bar ul li a{
-  text-decoration: none;
   padding: 5px 15px;
-  font-size: 20px;
+  font-size: 22px;
   color: #fff;
 }
 
-
+/* PRESENTATION SECTION */
 .presentation{
   background-color: #F1F1F1;
 }
@@ -182,6 +191,7 @@ header .title{
   font-family: 'Nunito', sans-serif;
 }
 
+/* SKILLS SECTION */
 .skills{
   width: 100%;
   background-color: white;
@@ -243,10 +253,18 @@ progress[value]::-webkit-progress-value {
   border-radius: 8px;
 }
 
+/* CONTACT SECTION */
 .contact{
-  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   background-color: #F1F1F1;
+}
+
+.row-2{
+  display: flex;
+  flex-direction: row;
 }
 
 .contact h2{
@@ -255,8 +273,15 @@ progress[value]::-webkit-progress-value {
   font-family: 'Nunito', sans-serif;
 }
 
+.contact h3{
+  font-family: 'Assistant', sans-serif;
+  font-size: 23px;
+  margin: 0 0 5px 0;
+}
+
 .contact hr{
   display: block;
+  margin: 0;
   width: 100%;
   border-style: solid;
   border-width: 0.8px;
@@ -264,23 +289,20 @@ progress[value]::-webkit-progress-value {
 }
 
 .contact .left, .contact .right{
-  display: inline-block;
   background-color: #F1F1F1;
+  flex: 1;
+  flex-grow: 1;
 }
 
 .contact .left{
   padding: 50px;
-  width: 50%;
   box-sizing: border-box;
-  float: left;
   border-right: solid 0.8px white;
 }
 
 .contact .right{
   padding: 50px;
-  width: 50%;
   box-sizing: border-box;
-  float: right;
 }
 
 .contact .left form{
@@ -310,6 +332,52 @@ input[type=text]:hover{
   background-color: #DCE6EF;
 }
 
-.contact .right h2{
-  text-align: left;
+.contact .right h3{
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+.contact .right h4{
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.contact .right ul{
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  margin: 20px 0 60px 0;
+}
+
+.contact .right li{
+  list-style: none;
+  margin-top: 1em;
+}
+
+.contact .right hr{
+  border: 0.1px inset #000;
+  margin: 0;
+  width: 60%;
+}
+
+.contact .right .social-bar-alt{
+}
+
+.contact .right .social-bar-alt ul{
+  margin: 20 0 0 5px;
+  padding: 0;
+}
+
+.contact .right .social-bar-alt li{
+  list-style: none;
+  display: inline-block;
+  font-size: 17px;
+  margin-right: 1.5em;
+  margin-top: 0;
+}
+
+.contact .right .social-bar-alt i{
+  color: #000;
 }

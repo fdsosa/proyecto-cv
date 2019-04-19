@@ -7,10 +7,14 @@
     <title>Mi web personal - Federico Sosa</title>
     <link rel="stylesheet" href="style.css">
     <!-- ICONS -->
-    <link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d">
-    <script type="text/javascript" src="function.js"></script>
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+          crossorigin="anonymous">
   </head>
   <body>
+
+    <!-- HEADER SECTION -->
     <header id="header">
       <nav>
         <div class="title">
@@ -26,6 +30,7 @@
       </nav>
     </header>
 
+    <!-- PROFILE SECTION -->
     <section class="background-pic">
       <div class="profile">
         <section class="profile-pic">
@@ -45,20 +50,21 @@
       </div>
     </section>
 
+    <!-- PRESENTATION SECTION -->
     <section class="presentation">
       <div class="social-bar">
         <ul>
           <li>
-            <a href=""><span class="socicon-linkedin"></span></a>
+            <a href=""><i class="fab fa-linkedin-in"></i></a>
           </li>
           <li>
-            <a href=""><span class="socicon-facebook"></span></a>
+            <a href=""><i class="fab fa-facebook-f"></i></a>
           </li>
           <li>
-            <a href=""><span class="socicon-github"></span></a>
+            <a href=""><i class="fab fa-github-alt"></i></a>
           </li>
           <li>
-            <a href=""><span class="socicon-youtube"></span></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
           </li>
         </ul>
       </div>
@@ -68,6 +74,7 @@
       </div>
     </section>
 
+    <!-- SKILLS SECTION -->
     <section class="skills" id="skillsSection">
       <h2>Skills</h2>
       <hr class="line_skills">
@@ -111,33 +118,46 @@
       </table>
     </section>
 
+    <!-- CONTACT SECTION -->
     <section class="contact" id="contactSection">
       <h2>Contact Me</h2>
       <hr>
-      <div class="left">
-        <form class="" action="index.html" method="post">
-          <div class="half">
+      <aside class="row-2">
+        <div class="left">
+          <form class="" action="index.html" method="post">
             <input type="text" name="name" placeholder="Name"><br>
-          </div>
-          <div class="half">
             <input type="text" name="email" placeholder="Email"><br>
-          </div>
-          <input type="text" name="subject" placeholder="Subject"><br>
-          <input type="text" name="message" placeholder="Message"><br>
-          <button type="button" onclick="alert('Hello World!')">Submit</button>
-        </form>
-      </div>
-      <div class="right">
-        <section class="">
-          <h2>Federico Sos</h1>
-          <h4>Web Developer</h4>
-          <ul>
-            <li><b>Phone:</b><br>+598 95683920</li>
-            <li><b>Email:</b><br>fdsosa.35@gmail.com</li>
-            <li><b>Date of Birth:</b><br>April 28th, 1999</li>
-          </ul>
-        </section>
-      </div>
+            <input type="text" name="subject" placeholder="Subject"><br>
+            <input type="text" name="message" placeholder="Message"><br>
+            <button type="button" onclick="alert('Hello World!')">Submit</button>
+          </form>
+        </div>
+        <div class="right">
+            <h3>Federico Sosa</h3>
+            <h4>Web Developer</h4>
+            <ul>
+              <li><b>Phone:</b><br>+598 95683920</li>
+              <li><b>Email:</b><br>fdsosa.35@gmail.com</li>
+            </ul>
+            <hr>
+            <div class="social-bar-alt">
+              <ul>
+                <li>
+                  <a href=""><i class="fab fa-linkedin-in"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-github-alt"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-instagram"></i></a>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </aside>
     </section>
   </body>
 </html>
