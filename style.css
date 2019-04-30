@@ -381,10 +381,18 @@ input[type=text]:hover{
     text-align: center;
   }
 
+  .contact .right h3{
+    font-size: 30px;
+    margin-top: 1em;
+  }
+
+  .contact .right h4{
+    font-size: 23px;
+  }
 
   .contact .right ul{
-    margin: 10px 0 30px 0;
-    font-size: 16px;
+    margin: 2em 0;
+    font-size: 18px;
   }
 
   .contact .right hr{
@@ -394,4 +402,24 @@ input[type=text]:hover{
   .contact .left input[type=text], .contact .left button{
     width: 100%;
   }
+
+  /* PRESENTATION SECTION */
+  .text-present{
+    text-align: center;
+    padding: 15% 10%;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .text-present p{
+    font-size: 17px;
+  }
+
+  /* SKILLS SECTION */
+  table{
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
 }
