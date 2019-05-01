@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mi web personal - Federico Sosa</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js">
+
+    </script>
     <!-- ICONS -->
     <link rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -17,8 +20,11 @@
     <!-- HEADER SECTION -->
     <header id="header">
       <nav>
-        <div class="title">
+        <div class="title" id="title-header">
           <h3>Federico Sosa</h3>
+        </div>
+        <div class="bars">
+          <i class="fas fa-bars" onclick="displayLinks()"></i>
         </div>
         <div class="links">
           <a href="">Home</a>
@@ -26,12 +32,27 @@
           <a href="#skillsSection">Skills</a>
           <a href="#contactSection">Contact</a>
         </div>
-        </ul>
+        <aside id="links-mob">
+          <ul>
+            <li>
+              <a href="" onclick="hideLinks()">Home</a>
+            </li>
+            <li>
+              <a href="" onclick="hideLinks()">Portfolio</a>
+            </li>
+            <li>
+              <a href="#skillsSection" onclick="hideLinks()">Skills</a>
+            </li>
+            <li>
+              <a href="#contactSection" onclick="hideLinks()">Contact</a>
+            </li>
+          </ul>
+        </aside>
       </nav>
     </header>
 
     <!-- PROFILE SECTION -->
-    <section class="background-pic">
+    <section class="background-pic" id="bg">
       <div class="profile">
         <section class="profile-pic">
           <img class="pic" src="profile-pic.jpg" alt="Foto de Perfil">
