@@ -185,16 +185,17 @@ header .title{
 
 /* SOCIAL BAR SECTION */
 .social-bar{
+  display: flex;
   width: 60%;
   height: 8vh;
+  align-items: center;
+  justify-content: center;
   margin: auto;
   background-color: #182153;
 }
 
 .social-bar ul{
   display: flex;
-  justify-content: center;
-  margin: 0;
 }
 
 .social-bar ul li{
@@ -205,6 +206,11 @@ header .title{
   padding: 5px 15px;
   font-size: 22px;
   color: #fff;
+}
+
+.social-bar-mobile{
+  display: none;
+  width: 100%;
 }
 
 /* PRESENTATION SECTION */
@@ -400,6 +406,11 @@ input[type=text]:hover{
 }
 
 /* RESPONSIVE  */
+@media screen and (max-width: 1000px) {
+  .profile, .social-bar{
+    width: 80%;
+  }
+}
 @media screen and (max-width: 685px) {
   /* HEADER SECTION */
   header{
@@ -411,7 +422,13 @@ input[type=text]:hover{
    }
 
    header .title{
-     justify-content: flex-end;
+     font-size: 32px;
+     padding-left: 1em;
+     justify-content: flex-start;
+   }
+
+   header .title h3{
+     font-size: 32px;
    }
 
    header .bars{
@@ -422,9 +439,20 @@ input[type=text]:hover{
    }
 
    header .bars i{
+     margin: 0 1em;
      display: flex;
-     padding: 0 0.7em 0 1.2em;
      font-size: 28px;
+   }
+
+   header .bars .bg-bar{
+     width: 60%;
+     height: 60%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: white;
+     border-radius: 50%;
+     margin-right: 1em;
    }
 
    header .bars i:hover{
@@ -468,6 +496,17 @@ input[type=text]:hover{
    .profile .content-info{
      padding-left: 45px !important;
    }
+
+   /* SOCIAL BAR SECTION */
+   .social-bar{
+     display: none;
+     width: 100%;
+   }
+
+   .social-bar-mobile{
+     display: flex;
+   }
+
 
   /* CONTACT SECTION */
   .row-2{
