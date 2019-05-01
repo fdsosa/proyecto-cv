@@ -6,89 +6,198 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mi web personal - Federico Sosa</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js">
+
+    </script>
+    <!-- ICONS -->
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+          crossorigin="anonymous">
   </head>
   <body>
-    <header>
+
+    <!-- HEADER SECTION -->
+    <header id="header">
       <nav>
-        <h3>Federico Sosa</h3>
-        <a href="">Home</a>
-        <a href="">About</a>
-        <a href="">Skills</a>
-        <a href="">Contact</a>
-        </ul>
+        <div class="title" id="title-header">
+          <h3>Federico Sosa</h3>
+        </div>
+        <div class="bars">
+          <section class="bg-bar" id="bar">
+            <i class="fas fa-bars" onclick="displayLinks()"></i>
+          </section>
+        </div>
+        <div class="links">
+          <a href="#bg">Home</a>
+          <a href="">Portfolio</a>
+          <a href="#skillsSection">Skills</a>
+          <a href="#contactSection">Contact</a>
+        </div>
+        <aside id="links-mob">
+          <ul>
+            <li>
+              <a href="#bg">Home</a>
+            </li>
+            <li>
+              <a href="">Portfolio</a>
+            </li>
+            <li>
+              <a href="#skillsSection">Skills</a>
+            </li>
+            <li>
+              <a href="#contactSection">Contact</a>
+            </li>
+          </ul>
+        </aside>
       </nav>
     </header>
 
-    <section class="background-pic">
-      <!-- <img src="computer.jpg" alt="" width="100%;" class="background-info"> -->
+    <!-- PROFILE SECTION -->
+    <section class="background-pic" id="bg">
       <div class="profile">
         <section class="profile-pic">
           <img class="pic" src="profile-pic.jpg" alt="Foto de Perfil">
         </section>
         <section class="profile-info">
-          <h1>Federico Sosa</h1>
-          <h4>Web Developer</h4>
-          <ul>
-            <li><b>Phone:</b><br>+598 95683920</li>
-            <li><b>Email:</b><br>fdsosa.35@gmail.com</li>
-            <li><b>Date of Birth:</b><br>April 28th, 1999</li>
-          </ul>
+          <div class="content-info">
+            <h1>Federico Sosa</h1>
+            <h4>Web Developer</h4>
+            <ul>
+              <li><b>Phone:</b><br>+598 95683920</li>
+              <li><b>Email:</b><br>fdsosa.35@gmail.com</li>
+              <li><b>Date of Birth:</b><br>April 28th, 1999</li>
+            </ul>
+            </div>
         </section>
+        <!-- SOCIAL BAR MOBILE -->
+        <div class="social-bar social-bar-mobile">
+          <ul>
+            <li>
+              <a href=""><i class="fab fa-linkedin-in"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-github-alt"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
-<!--<div class="main">
-      <header>
-        <img class="pic" src="profile-pic.jpg" alt="Foto de Perfil">
-        <h1>Federico Sosa</h1>
-        <ul class="links">
-          <li><a href="facebook.com" target="_blank">Autobiografía</a></li>
-          <li><a href="https://twitter.com" target="_blank">Información de contacto</a></li>
+    <!-- PRESENTATION SECTION -->
+    <section class="presentation">
+      <div class="social-bar">
+        <ul>
+          <li>
+            <a href=""><i class="fab fa-linkedin-in"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fab fa-github-alt"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fab fa-instagram"></i></a>
+          </li>
         </ul>
-      </header>
-      <h2>Bienvenido a mi perfil personal</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus accusantium similique repudiandae hic mollitia, alias excepturi, quaerat libero, explicabo odio corporis culpa ullam facilis veritatis eum? Amet aliquid, cumque eligendi!</p>
+      </div>
+      <div class="text-present">
+        <h2>Hi I´m Federico</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero cupiditate modi delectus numquam veniam dolorem minus minima illum enim quidem vel, rerum possimus ipsa, harum corporis. Quasi perspiciatis, possimus. Dolorum!</p>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="skills" id="skillsSection">
+      <h2 class="title-section">Skills</h2>
+      <hr class="line_skills">
       <table>
-        <caption>
-          <h3>Mis Habilidades</h3>
-        </caption>
         <thead>
           <tr>
-            <th>Materia</th>
-            <th>Nivel de Desempeño</th>
+            <th>Subject</th>
+            <th>Progress </th>
           </tr>
         </thead>
         <tfoot>
           <tr>
             <td>Git</td>
-            <td><progress max="100" value="100"></progress></td>
+            <td class="cell-progress"><progress max="100" value="60"></progress></td>
           </tr>
           <tr>
             <td>HTML</td>
-            <td><progress max="100" value="100"></progress></td>
+            <td class="cell-progress"><progress max="100" value="80"></progress></td>
           </tr>
           <tr>
             <td>CSS</td>
-            <td><progress max="100" value="100"></progress></td>
+            <td class="cell-progress"><progress max="100" value="74"></progress></td>
           </tr>
           <tr>
             <td>JS</td>
-            <td><progress max="100" value="100"></progress></td>
+            <td class="cell-progress"><progress max="100" value="48"></progress></td>
           </tr>
           <tr>
             <td>PHP</td>
-            <td><progress max="100" value="90"></progress></td>
+            <td class="cell-progress"><progress max="100" value="56"></progress></td>
           </tr>
           <tr>
-            <td>BASE DE DATOS</td>
-            <td><progress max="100" value="100"></progress></td>
+            <td>MySQL</td>
+            <td class="cell-progress"><progress max="100" value="71"></progress></td>
           </tr>
           <tr>
-            <td>INGLES</td>
-            <td><progress max="100" value="100"></progress></td>
+            <td>English</td>
+            <td class="cell-progress"><progress max="100" value="80"></progress></td>
           </tr>
         </tfoot>
-      </table> -->
-    </div>
+      </table>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contactSection">
+      <h2 class="title-section">Contact Me</h2>
+      <hr>
+      <aside class="row-2">
+        <div class="left">
+          <form class="" action="index.html" method="post">
+            <input type="text" name="name" placeholder="Name"><br>
+            <input type="text" name="email" placeholder="Email"><br>
+            <input type="text" name="subject" placeholder="Subject"><br>
+            <input type="text" name="message" placeholder="Message"><br>
+            <button type="button" onclick="alert('Hello World!')">Submit</button>
+          </form>
+        </div>
+        <div class="right">
+            <h3>Federico Sosa</h3>
+            <h4>Web Developer</h4>
+            <ul>
+              <li><b>Phone:</b><br>+598 95683920</li>
+              <li><b>Email:</b><br>fdsosa.35@gmail.com</li>
+            </ul>
+            <hr>
+            <div class="social-bar-alt">
+              <ul>
+                <li>
+                  <a href=""><i class="fab fa-linkedin-in"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-github-alt"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-instagram"></i></a>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </aside>
+    </section>
   </body>
 </html>
