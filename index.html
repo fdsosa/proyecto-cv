@@ -6,9 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mi web personal - Federico Sosa</title>
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="script.js">
-
-    </script>
     <!-- ICONS -->
     <link rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -20,36 +17,39 @@
     <!-- HEADER SECTION -->
     <header id="header">
       <nav>
-        <div class="title" id="title-header">
+        <div class="title">
           <h3>Federico Sosa</h3>
         </div>
-        <div class="bars">
-          <section class="bg-bar" id="bar">
-            <i class="fas fa-bars" onclick="displayLinks()"></i>
+        <!-- MENU FOR MOBILE -->
+        <div class="menu-mobile">
+          <section class="bg-bar" id="bg-bars">
+            <i class="fas fa-bars" id="bars"></i>
+          </section>
+          <!-- LINKS FOR MOBILE -->
+          <section class="links-mob menu-hidden" id="links-mob">
+            <ul>
+              <li>
+                <a href="#bg">Home</a>
+              </li>
+              <li>
+                <a href="">Portfolio</a>
+              </li>
+              <li>
+                <a href="#skillsSection">Skills</a>
+              </li>
+              <li>
+                <a href="#contactSection">Contact</a>
+              </li>
+            </ul>
           </section>
         </div>
+        <!-- LINKS FOR PC -->
         <div class="links">
           <a href="#bg">Home</a>
           <a href="">Portfolio</a>
           <a href="#skillsSection">Skills</a>
           <a href="#contactSection">Contact</a>
         </div>
-        <aside id="links-mob">
-          <ul>
-            <li>
-              <a href="#bg">Home</a>
-            </li>
-            <li>
-              <a href="">Portfolio</a>
-            </li>
-            <li>
-              <a href="#skillsSection">Skills</a>
-            </li>
-            <li>
-              <a href="#contactSection">Contact</a>
-            </li>
-          </ul>
-        </aside>
       </nav>
     </header>
 
@@ -199,5 +199,6 @@
         </div>
       </aside>
     </section>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
