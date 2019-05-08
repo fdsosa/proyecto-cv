@@ -41,7 +41,7 @@ header{
   z-index: 10;
 }
 
-header .bars{
+header .menu-mobile{
   display: none;
 }
 
@@ -57,27 +57,44 @@ header .links{
   justify-content: flex-end;
 }
 
-header #links-mob{
+.menu-hidden{
   display: none;
+}
+
+.menu-visible{
+  display: flex;
+}
+
+header .links-mob{
   position: absolute;
   top: 13vh;
-  left: 0;
+  height: 0vh;
   width: 100%;
-  height: 0;
-  transition-property: height;
-  transition-duration: 1s;
   background: #fff;
   align-items: flex-start;
   justify-content: center;
   text-align: center;
 }
 
-header #links-mob li{
-  font-size: 22px;
-  padding: 0.3em 0;
+header .links-mob ul{
+  width: 70%;
+  height: 100%;
+  margin: auto;
 }
 
-header #links-mob a{
+header .links-mob li{
+  width: 100%;
+  font-size: 20px;
+  margin: 0.3em 0;
+  padding: 0.3em 0;
+  box-sizing: border-box;
+}
+
+header .links-mob li:hover{
+  background-color: #DCE6EF;
+}
+
+header .links-mob a{
   padding: 0;
 }
 
@@ -431,20 +448,21 @@ input[type=text]:hover{
      font-size: 32px;
    }
 
-   header .bars{
+   header .menu-mobile{
      display: flex;
      height: 13vh;
      align-items: center;
      justify-content: flex-end;
    }
 
-   header .bars i{
+   header .menu-mobile i{
      margin: 0 1em;
      display: flex;
      font-size: 28px;
+     color: #182153;
    }
 
-   header .bars .bg-bar{
+   header .menu-mobile .bg-bar{
      width: 60%;
      height: 60%;
      display: flex;
@@ -455,7 +473,7 @@ input[type=text]:hover{
      margin-right: 1em;
    }
 
-   header .bars i:hover{
+   header .menu-mobile .bg-bar:hover{
      cursor: pointer;
    }
 
