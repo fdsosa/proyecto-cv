@@ -58,29 +58,28 @@ header .links{
 }
 
 .menu-hidden{
-  display: none;
+  opacity: 0;
+  height: 0;
 }
 
 .menu-visible{
-  display: flex;
+  opacity: 1;
+  height: 30vh;
+}
+
+.d-none{
+  display: none;
 }
 
 header .links-mob{
   position: absolute;
   top: 13vh;
-  height: 0vh;
   width: 100%;
   background: #fff;
   align-items: flex-start;
   justify-content: center;
   text-align: center;
-  transition-property: height;
-  transition-duration: 1s;
-  transition-timing-function: ease;
-}
-
-.transitionAux{
-  height: 30vh !important;
+  transition: opacity .5s ease, height .5s ease;
 }
 
 header .links-mob ul{
