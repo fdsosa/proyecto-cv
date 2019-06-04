@@ -57,53 +57,6 @@ header .links{
   justify-content: flex-end;
 }
 
-.menu-hidden{
-  opacity: 0;
-  height: 0;
-}
-
-.menu-visible{
-  opacity: 1;
-  height: 30vh;
-}
-
-.d-none{
-  display: none;
-}
-
-header .links-mob{
-  position: absolute;
-  top: 13vh;
-  width: 100%;
-  background: #fff;
-  align-items: flex-start;
-  justify-content: center;
-  text-align: center;
-  transition: opacity .5s ease, height .5s ease;
-}
-
-header .links-mob ul{
-  width: 70%;
-  height: 100%;
-  margin: auto;
-}
-
-header .links-mob li{
-  width: 100%;
-  font-size: 20px;
-  margin: 0.3em 0;
-  padding: 0.3em 0;
-  box-sizing: border-box;
-}
-
-header .links-mob li:hover{
-  background-color: #DCE6EF;
-}
-
-header .links-mob a{
-  padding: 0;
-}
-
 header a{
   display: inline-block;
   font-family: 'Nunito', sans-serif;
