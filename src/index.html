@@ -1,58 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <include src="head-metatags"></include>
     <title>Mi web personal - Federico Sosa</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" media="(max-width: 685px)" href="responsive.css">
-    <!-- ICONS -->
-    <link rel="stylesheet"
-          href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-          crossorigin="anonymous">
+    <include src="head-styles"></include>
+    <include src="head-frameworks"></include>
   </head>
   <body>
 
     <!-- HEADER SECTION -->
-    <header id="header">
-      <nav>
-        <div class="title">
-          <h3>Federico Sosa</h3>
-        </div>
-        <!-- MENU FOR MOBILE -->
-        <div class="menu-mobile">
-          <section class="bg-bar bar-inactive" id="bg-bars">
-            <i class="fas fa-bars" id="bars"></i>
-          </section>
-          <!-- LINKS FOR MOBILE -->
-          <section class="links-mob menu-hidden" id="links-mob">
-            <ul>
-              <li>
-                <a href="#bg">Home</a>
-              </li>
-              <li>
-                <a href="">Portfolio</a>
-              </li>
-              <li>
-                <a href="#skillsSection">Skills</a>
-              </li>
-              <li>
-                <a href="#contactSection">Contact</a>
-              </li>
-            </ul>
-          </section>
-        </div>
-        <!-- LINKS FOR PC -->
-        <div class="links">
-          <a href="#bg">Home</a>
-          <a href="">Portfolio</a>
-          <a href="#skillsSection">Skills</a>
-          <a href="#contactSection">Contact</a>
-        </div>
-      </nav>
-    </header>
+    <include src="header"></include>
 
     <!-- PROFILE SECTION -->
     <section class="background-pic" id="bg">
@@ -160,46 +117,8 @@
     </section>
 
     <!-- CONTACT SECTION -->
-    <section class="contact" id="contactSection">
-      <h2 class="title-section">Contact Me</h2>
-      <hr>
-      <aside class="row-2">
-        <div class="left">
-          <form class="" action="index.html" method="post">
-            <input type="text" name="name" placeholder="Name"><br>
-            <input type="text" name="email" placeholder="Email"><br>
-            <input type="text" name="subject" placeholder="Subject"><br>
-            <input type="text" name="message" placeholder="Message"><br>
-            <button type="button" onclick="alert('Hello World!')">Submit</button>
-          </form>
-        </div>
-        <div class="right">
-            <h3>Federico Sosa</h3>
-            <h4>Web Developer</h4>
-            <ul>
-              <li><b>Phone:</b><br>+598 95683920</li>
-              <li><b>Email:</b><br>fdsosa.35@gmail.com</li>
-            </ul>
-            <hr>
-            <div class="social-bar-alt">
-              <ul>
-                <li>
-                  <a href=""><i class="fab fa-linkedin-in"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="fab fa-facebook-f"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="fab fa-github-alt"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="fab fa-instagram"></i></a>
-                </li>
-              </ul>
-            </div>
-        </div>
-      </aside>
-    </section>
+    <include src="footer"></include>
+
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
