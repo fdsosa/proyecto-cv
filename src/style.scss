@@ -1,0 +1,368 @@
+@import 'variables';
+@import 'mixins';
+
+/* BODY TAGS */
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+
+img{
+  margin: 0;
+  display: block;
+}
+
+h1, h2, h3, h4, li, p, th, td, a{
+  color: $primary-color;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+/* HEADER SECTION */
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 13vh;
+  background: $bg-color-1;
+  z-index: 10;
+
+  .menu-mobile{
+    display: none;
+  }
+
+  h3{
+    @include font-type(('Assistant', sans-serif), (27px));
+    margin: 0;
+  }
+
+  .links{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5%;
+
+    a{
+      display: inline-block;
+      @include font-type($principal-font, 16px);
+      text-transform: uppercase;
+      box-sizing: border-box;
+      padding: 20px 30px;
+      border-radius: 5%;
+
+      &:hover{
+        background-color: $bg-color-2;
+      }
+    }
+  }
+
+  nav{
+    display: flex;
+    align-items: center;
+  }
+
+  .title{
+    @include size(flex, 100%, 13vh, flex-start, center);
+    padding-left: 30px;
+    box-sizing: border-box;
+  }
+}
+
+/* PROFILE SECTION */
+
+.background-pic{
+  @include size(flex, 100%, 90vh, center, stretch);
+  background-image: url(../computer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 13vh;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.profile{
+  @include size(flex, 60%, 100%, center, flex-end); 
+  box-sizing: border-box;
+  margin: auto;
+  position: absolute;
+
+  ul{
+    @include font-type($principal-font, 15px);
+  }
+
+  li{
+    margin-bottom: 25px;
+  }
+
+  .profile-pic,  .profile-info{
+    box-sizing: border-box;
+    display: inline-block;
+    height: 70%;
+    flex: 1;
+    flex-grow: 1;
+  }
+
+  .profile-pic{
+    img{
+      width: 100%;
+      height: 100%;
+    }
+
+    .pic{
+      width: 100%;
+      height: 100%;
+      filter: grayscale(100%);
+    }
+  }
+
+  .profile-info{
+    background-color: $bg-color-1;
+    display: flex;
+    align-items: center;
+
+    .content-info{
+      padding-left: 70px;
+    }
+
+    h1{
+      @include font-type(('Assistant', sans-serif), 29px);
+      margin-bottom: 5px;
+    }
+
+    h4{
+      @include font-type(('Roboto', sans-serif), 14px);
+      text-transform: uppercase;
+      margin-top: 0;
+    }
+  }
+}
+
+/* SOCIAL BAR SECTION */
+.social-bar{
+  @include size(flex, 60%, 8vh, center, center); 
+  margin: auto;
+  background-color: $primary-color;
+
+  ul{
+    display: flex;
+    li{
+      margin: 20px 10px;
+      a{
+        padding: 5px 15px;
+        font-size: 22px;
+        color: $bg-color-1;
+      }
+    }
+  }
+}
+
+.social-bar-mobile{
+  display: none;
+  width: 100%;
+}
+
+/* PRESENTATION SECTION */
+.presentation{
+  background-color: $bg-color-2;
+}
+
+.text-present{
+  text-align: center;
+  padding: 100px 32%;
+  font-family: $principal-font;
+}
+
+/* SKILLS SECTION */
+.skills{
+  width: 100%;
+  background-color: $bg-color-1;
+  text-align: center;
+  font-family: $principal-font;
+}
+
+.line_skills{
+  display: block;
+  width: 100%;
+  border-style: inset;
+  border-width: 0.5px;
+}
+
+table{
+  width: 60%;
+  margin: 40px auto;
+  
+  th, td{
+    padding: 17px;
+  }
+
+  th{
+    height: 30px;
+    text-transform: uppercase;
+  }
+
+  td{
+    width: 10%;
+  }
+
+  .cell-progress{
+    width: 30%;
+    
+    progress{
+      width: 100%;
+      height: 25px;
+      -webkit-appearance: none;
+    }
+
+    progress[value]::-webkit-progress-bar{
+      background-color: $bg-color-1;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    }
+    
+    progress[value]::-webkit-progress-value {
+      background-color: $primary-color;
+      border-radius: 8px;
+    }
+  }
+}
+
+/* CONTACT SECTION */
+.contact{
+  @include size(flex, 100%, auto, center, stretch); 
+  flex-direction: column;
+  background-color: $bg-color-2;
+
+  .title-section{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Sarabun', sans-serif;
+  }
+
+  hr{
+    display: block;
+    margin: 0;
+    width: 100%;
+    border: solid 0.8px $bg-color-1;
+  }
+
+  .row-2{
+    display: flex;
+    flex-direction: row;
+
+    .left, .right{
+      background-color: $bg-color-2;
+      flex: 1;
+      flex-grow: 1;
+    }
+
+    .left{
+      padding: 50px;
+      box-sizing: border-box;
+      border-right: solid 0.8px $bg-color-1;
+
+      form{
+        text-align: right;
+
+        button{
+          width: 60%;
+          padding: 15px 30px;
+          border: none;
+          background-color: $primary-color;
+          color: $bg-color-1;
+          box-sizing: border-box;
+          font-family: $principal-font;
+
+          &:hover{
+            cursor: pointer;
+          }
+        }
+
+        input[type=text] {
+          width: 60%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          box-sizing: border-box;
+          border: none;
+          font-family: $principal-font;
+
+          &:hover{
+            background-color: #DCE6EF;
+          }
+        }
+      }
+    }
+
+    .right{
+      padding: 50px;
+      box-sizing: border-box;
+
+      h3{
+        @include font-type(('Assistant', sans-serif), 23px);
+        margin: 0 0 5px 0;
+        font-weight: 300;
+      }
+
+      h4{
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin: 0;
+      }
+
+      ul{
+        @include font-type(('Hind', sans-serif), 14px);
+        margin: 20px 0 60px 0;
+
+        li{
+          margin-top: 1em;
+        }
+      }
+
+      hr{
+        border: 0.6px inset #000;
+        margin: 0;
+        width: 60%;
+      }
+
+      .social-bar-alt{
+
+        ul{
+          margin: 20 0 0 5px;
+
+          li{
+            display: inline-block;
+            font-size: 17px;
+            margin-right: 1.5em;
+            margin-top: 0;    
+            
+            i{
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* RESPONSIVE  */
+@media screen and (max-width: 1000px) {
+  .profile, .social-bar{
+    width: 80%;
+  }
+}
