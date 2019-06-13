@@ -1,5 +1,6 @@
 var express = require('express');
 var server = express();
+var path = require('path')
 
 server.get('/', function (req, res) {
   //console.log('Esta es la raiz de mi sitio');
