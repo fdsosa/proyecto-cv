@@ -38,7 +38,7 @@ gulp.task('build:html:prod', function () {
       '!.src/templates'
     ])
     .pipe(teddy.compile())
-    .pipe(gulp.dest('./.dist'))
+    .pipe(gulp.dest('./dist'))
 });
 
 gulp.task('build:sass', function () {
@@ -56,7 +56,7 @@ gulp.task('build:sass:prod', function () {
   return gulp
       .src('./src/**/*.scss')
       .pipe(sass())
-      .pipe(gulp.dest('./.dist/css'));
+      .pipe(gulp.dest('./dist/css'));
 });
 
 gulp.task('build:files', function () {
@@ -83,7 +83,7 @@ gulp.task('build:files:prod', function () {
       '!./src/*.html',
       '!./src/**/*.scss'
     ])
-    .pipe(gulp.dest('./.dist'))
+    .pipe(gulp.dest('./dist'))
 });
   
 gulp.task('build:dev', gulp.series(['clean', 'build:html', 'build:sass', 'build:files']));
