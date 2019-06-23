@@ -3,7 +3,8 @@ var clean       = require('gulp-clean');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
 var teddy       = require('gulp-teddy').settings({
-    setTemplateRoot: 'src/templates/'
+    setTemplateRoot: 'src/templates/',
+    compileAtEveryRender: true
 });
 var sass          = require('gulp-sass');
     sass.compiler = require('node-sass');
