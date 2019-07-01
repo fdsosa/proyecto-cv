@@ -1,0 +1,278 @@
+/* BODY TAGS */
+html {
+  scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: arial; }
+
+img {
+  margin: 0;
+  display: block; }
+
+h1, h2, h3, h4, li, p, th, td, a {
+  color: #182153; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+/* HEADER SECTION */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 13vh;
+  background: #fff;
+  z-index: 10; }
+  header .menu-mobile {
+    display: none; }
+  header h3 {
+    font-family: "Assistant", sans-serif;
+    font-size: 27px;
+    margin: 0; }
+  header .links {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5%; }
+    header .links a {
+      display: inline-block;
+      font-family: "Nunito", sans-serif;
+      font-size: 16px;
+      text-transform: uppercase;
+      box-sizing: border-box;
+      padding: 20px 30px;
+      border-radius: 5%; }
+      header .links a:hover {
+        background-color: #F1F1F1; }
+  header nav {
+    display: flex;
+    align-items: center; }
+  header .title {
+    display: flex;
+    width: 100%;
+    height: 13vh;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px;
+    box-sizing: border-box; }
+
+/* PROFILE SECTION */
+.background-pic {
+  display: flex;
+  width: 100%;
+  height: 90vh;
+  justify-content: center;
+  align-items: stretch;
+  background-image: url(../computer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 13vh;
+  overflow: hidden;
+  position: relative; }
+
+.profile {
+  display: flex;
+  width: 60%;
+  height: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  box-sizing: border-box;
+  margin: auto;
+  position: absolute; }
+  .profile ul {
+    font-family: "Nunito", sans-serif;
+    font-size: 15px; }
+  .profile li {
+    margin-bottom: 25px; }
+  .profile .profile-pic, .profile .profile-info {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 70%;
+    flex: 1;
+    flex-grow: 1; }
+  .profile .profile-pic img {
+    width: 100%;
+    height: 100%; }
+  .profile .profile-pic .pic {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%); }
+  .profile .profile-info {
+    background-color: #fff;
+    display: flex;
+    align-items: center; }
+    .profile .profile-info .content-info {
+      padding-left: 70px; }
+    .profile .profile-info h1 {
+      font-family: "Assistant", sans-serif;
+      font-size: 29px;
+      margin-bottom: 5px; }
+    .profile .profile-info h4 {
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-top: 0; }
+
+/* SOCIAL BAR SECTION */
+.social-bar {
+  display: flex;
+  width: 60%;
+  height: 8vh;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: #182153; }
+  .social-bar ul {
+    display: flex; }
+    .social-bar ul li {
+      margin: 20px 10px; }
+      .social-bar ul li a {
+        padding: 5px 15px;
+        font-size: 22px;
+        color: #fff; }
+
+.social-bar-mobile {
+  display: none;
+  width: 100%; }
+
+/* PRESENTATION SECTION */
+.presentation {
+  background-color: #F1F1F1; }
+
+.text-present {
+  text-align: center;
+  padding: 100px 32%;
+  font-family: "Nunito", sans-serif; }
+
+/* SKILLS SECTION */
+.skills {
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  font-family: "Nunito", sans-serif; }
+
+.line_skills {
+  display: block;
+  width: 100%;
+  border-style: inset;
+  border-width: 0.5px; }
+
+table {
+  width: 60%;
+  margin: 40px auto; }
+  table th, table td {
+    padding: 17px; }
+  table th {
+    height: 30px;
+    text-transform: uppercase; }
+  table td {
+    width: 10%; }
+  table .cell-progress {
+    width: 30%; }
+    table .cell-progress progress {
+      width: 100%;
+      height: 25px;
+      -webkit-appearance: none; }
+    table .cell-progress progress[value]::-webkit-progress-bar {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset; }
+    table .cell-progress progress[value]::-webkit-progress-value {
+      background-color: #182153;
+      border-radius: 8px; }
+
+/* CONTACT SECTION */
+.contact {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  background-color: #F1F1F1; }
+  .contact .title-section {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Sarabun', sans-serif; }
+  .contact hr {
+    display: block;
+    margin: 0;
+    width: 100%;
+    border: solid 0.8px #fff; }
+  .contact .row-2 {
+    display: flex;
+    flex-direction: row; }
+    .contact .row-2 .left, .contact .row-2 .right {
+      background-color: #F1F1F1;
+      flex: 1;
+      flex-grow: 1; }
+    .contact .row-2 .left {
+      padding: 50px;
+      box-sizing: border-box;
+      border-right: solid 0.8px #fff; }
+      .contact .row-2 .left form {
+        text-align: right; }
+        .contact .row-2 .left form button {
+          width: 60%;
+          padding: 15px 30px;
+          border: none;
+          background-color: #182153;
+          color: #fff;
+          box-sizing: border-box;
+          font-family: "Nunito", sans-serif; }
+          .contact .row-2 .left form button:hover {
+            cursor: pointer; }
+        .contact .row-2 .left form input[type=text] {
+          width: 60%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          box-sizing: border-box;
+          border: none;
+          font-family: "Nunito", sans-serif; }
+          .contact .row-2 .left form input[type=text]:hover {
+            background-color: #DCE6EF; }
+    .contact .row-2 .right {
+      padding: 50px;
+      box-sizing: border-box; }
+      .contact .row-2 .right h3 {
+        font-family: "Assistant", sans-serif;
+        font-size: 23px;
+        margin: 0 0 5px 0;
+        font-weight: 300; }
+      .contact .row-2 .right h4 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin: 0; }
+      .contact .row-2 .right ul {
+        font-family: "Hind", sans-serif;
+        font-size: 14px;
+        margin: 20px 0 60px 0; }
+        .contact .row-2 .right ul li {
+          margin-top: 1em; }
+      .contact .row-2 .right hr {
+        border: 0.6px inset #000;
+        margin: 0;
+        width: 60%; }
+      .contact .row-2 .right .social-bar-alt ul {
+        margin: 20 0 0 5px; }
+        .contact .row-2 .right .social-bar-alt ul li {
+          display: inline-block;
+          font-size: 17px;
+          margin-right: 1.5em;
+          margin-top: 0; }
+          .contact .row-2 .right .social-bar-alt ul li i {
+            color: #000; }
+
+/* RESPONSIVE  */
+@media screen and (max-width: 1000px) {
+  .profile, .social-bar {
+    width: 80%; } }
