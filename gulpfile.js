@@ -46,7 +46,7 @@ gulp.task('build:sass', function () {
     console.log('Build sass files has started');
 
     return gulp
-        .src('./src/**/*.scss')
+        .src('./src/scss/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('./.temp/css'));
 });
@@ -55,7 +55,7 @@ gulp.task('build:sass:prod', function () {
   console.log('Build sass files has started');
 
   return gulp
-      .src('./src/**/*.scss')
+      .src('./src/scss/*scss')
       .pipe(sass())
       .pipe(gulp.dest('./dist/css'));
 });
