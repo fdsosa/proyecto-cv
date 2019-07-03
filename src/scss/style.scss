@@ -31,13 +31,54 @@ ul{
 }
 
 /* HEADER SECTION */
+.header-index{
+  background: $bg-color-1;
+}
+
+.header-repos{
+  background: $primary-color;
+
+  nav{
+
+    .title{
+
+      h3{
+        color: white;
+      }
+    }
+
+    .menu-mobile{
+
+      ul{
+
+        li{
+
+          a{
+            color:white;
+          }
+        }
+      }
+    }
+
+    .links{
+
+      a{
+        color:white;
+
+        &:hover{
+          background-color: $primary-color-detail;
+        }
+      }
+    }
+  }
+}
+
 header{
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 13vh;
-  background: $bg-color-1;
   z-index: 10;
 
   .menu-mobile{
@@ -111,20 +152,22 @@ header{
   .profile-pic,  .profile-info{
     box-sizing: border-box;
     display: inline-block;
-    height: 70%;
     flex: 1;
     flex-grow: 1;
+    min-width: 500px;
+    min-height: 500px;
+  }
+
+  .profile-info{
+    width: 100%;
   }
 
   .profile-pic{
     img{
-      width: 100%;
-      height: 100%;
     }
 
     .pic{
       width: 100%;
-      height: 100%;
       filter: grayscale(100%);
     }
   }
@@ -153,7 +196,7 @@ header{
 
 /* SOCIAL BAR SECTION */
 .social-bar{
-  @include size(flex, 60%, 8vh, center, center); 
+  @include size(flex, 100%, 8vh, center, center); 
   margin: auto;
   background-color: $primary-color;
 
@@ -184,6 +227,10 @@ header{
   text-align: center;
   padding: 100px 32%;
   font-family: $principal-font;
+
+  p{
+    font-size: 20px;
+  }
 }
 
 /* SKILLS SECTION */
@@ -218,32 +265,68 @@ table{
     width: 10%;
   }
 
-  .cell-progress{
-    width: 30%;
-
-    ::-webkit-progress-value {
-      width: 10%;
-      transition: width 1s;
-    }
+  .prog-bar-cont{
+    width: 100%;
+    height: 2.5em;
+    padding: 0.5em;
+    border-radius: 50px;
+    box-sizing: border-box;
     
-    .progress-bar__bar{
-      width: 0;
-      height: 25px;
-      -webkit-appearance: none;
-      transition: width 3s ease; 
-    }
-
-    progress[value]::-webkit-progress-bar{
-      background-color: $bg-color-1;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
-    }
-
-    progress[value]::-webkit-progress-value {
-      background-color: $primary-color;
-      border-radius: 8px;
+    .prog-bar{
+      width: 100%;
+      height: 100%;
+      border-radius: 50px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.15) inset, 0 0 1px 3px rgba(white, 0.75) inset;
+    
+       .background{
+          width: 100%;
+          height: 100%;
+          border-radius: 50px;
+          background: $primary-color;
+         -webkit-clip-path: inset(0 100% 0 0);
+          clip-path: inset(0 100% 0 0);
+         transition: all 2s;
+         -webkit-transition: all 3s;
+      }
     }
   }
+}
+
+.progBar-animate-git{
+  -webkit-clip-path: inset(0 30% 0 0) !important;
+  clip-path: inset(0 30% 0 0) !important;
+}
+
+.progBar-animate-css{
+  -webkit-clip-path: inset(0 20% 0 0) !important;
+  clip-path: inset(0 20% 0 0) !important;
+}
+
+.progBar-animate-html{
+  -webkit-clip-path: inset(0 25% 0 0) !important;
+  clip-path: inset(0 25% 0 0) !important;
+}
+
+.progBar-animate-js{
+  -webkit-clip-path: inset(0 40% 0 0) !important;
+  clip-path: inset(0 40% 0 0) !important;
+}
+
+.progBar-animate-php{
+  -webkit-clip-path: inset(0 50% 0 0) !important;
+  clip-path: inset(0 50% 0 0) !important;
+}
+
+.progBar-animate-mysql{
+  -webkit-clip-path: inset(0 40% 0 0) !important;
+  clip-path: inset(0 40% 0 0) !important;
+}
+
+.progBar-animate-english{
+  -webkit-clip-path: inset(0 20% 0 0) !important;
+  clip-path: inset(0 20% 0 0) !important;
 }
 
 /* CONTACT SECTION */
@@ -364,6 +447,71 @@ table{
       }
     }
   }
+}
+
+/* CONTENT SECTION */
+.content{
+  width: 80%;
+  margin: auto;
+  margin-top: 18vh;
+  margin-bottom: 18vh;
+  text-align: center;
+
+  h1{
+    font-family: 'Sarabun', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .repos-placeholder{
+    width: 75%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #cfcfcf;
+    font-size: 20px;
+    font-family: "Hind", sans-serif;
+  }
+
+  .repos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 3em;
+    grid-row-gap: 2em;
+
+    .repo{
+      background-color: $bg-color-2;
+      border: 2px solid rgb(228, 223, 223);
+      border-radius: 5px;
+      text-align: left;
+      padding: 0.5em 2.5em;
+      transition: all 0.2s ease;
+
+      &:hover{
+        background-color: rgb(185, 185, 185);
+        transform: scale(1.1);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+        z-index: 1;
+      }
+
+        h4{
+          color: $primary-color;
+
+          a{
+            color: $primary-color;
+          }
+        }
+
+        h3{
+          color: $primary-color;
+        }
+      }
+  }
+}
+
+/* HELPERS CLASSES */
+.d-none{
+  display: none !important;
 }
 
 /* RESPONSIVE  */

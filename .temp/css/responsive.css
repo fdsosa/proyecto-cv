@@ -1,4 +1,23 @@
 /* HEADER SECTION */
+.header-repos .menu-mobile .links-mob {
+  background: #181739f0;
+  transition: height .5s ease; }
+  .header-repos .menu-mobile .links-mob ul {
+    width: 70%;
+    height: 100%;
+    margin: auto; }
+    .header-repos .menu-mobile .links-mob ul li {
+      width: 100%;
+      font-size: 20px;
+      margin: 0.3em 0;
+      padding: 0.3em 0;
+      border-radius: 5px;
+      box-sizing: border-box; }
+      .header-repos .menu-mobile .links-mob ul li:hover {
+        background-color: #182153; }
+      .header-repos .menu-mobile .links-mob ul li a {
+        padding: 0; }
+
 header {
   position: absolute; }
   header .title {
@@ -69,31 +88,41 @@ header {
     flex-direction: column;
     height: 120vh;
     width: 80%;
-    padding: 10% 0; }
+    padding: 5% 0; }
     .background-pic .profile .profile-pic, .background-pic .profile .profile-info {
       display: flex;
-      box-sizing: border-box;
-      width: 100%; }
-    .background-pic .profile .profile-pic {
-      height: 100%;
-      align-items: flex-end; }
-      .background-pic .profile .profile-pic img {
-        width: 100%;
-        height: 100%; }
+      width: 400px;
+      min-width: 250px;
+      max-width: 400px;
+      min-height: 250px;
+      max-height: 400px; }
     .background-pic .profile .profile-info {
       background-color: #fff;
-      display: flex;
       align-items: center; }
       .background-pic .profile .profile-info .content-info {
         padding-left: 45px !important; }
 
 /* SOCIAL BAR SECTION */
-.social-bar {
-  display: none;
-  width: 100%; }
-
 .social-bar-mobile {
-  display: flex; }
+  display: flex;
+  width: 400px;
+  height: 8vh;
+  justify-content: center;
+  align-items: center;
+  min-width: 250px;
+  margin: auto;
+  background-color: #182153; }
+  .social-bar-mobile ul {
+    display: flex; }
+    .social-bar-mobile ul li {
+      margin: 20px 10px; }
+      .social-bar-mobile ul li a {
+        padding: 5px 15px;
+        font-size: 22px;
+        color: #fff; }
+
+.social-bar {
+  display: none; }
 
 /* PRESENTATION SECTION */
 .text-present {
@@ -120,7 +149,7 @@ table {
   .contact .row-2 .left form {
     text-align: center; }
   .contact .row-2 .left input, .contact .row-2 .left button {
-    width: 100%; }
+    width: 80% !important; }
   .contact .row-2 .right h3 {
     font-size: 30px;
     margin-top: 1em; }
@@ -131,3 +160,7 @@ table {
     font-size: 18px; }
   .contact .row-2 .right hr {
     width: 100%; }
+
+.content .repos {
+  grid-template-columns: 1fr;
+  grid-row-gap: 2em; }

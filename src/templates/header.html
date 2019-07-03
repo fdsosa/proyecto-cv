@@ -1,5 +1,11 @@
 <!-- Template: Header -->
-<header id="header">
+<if classHeader="header-index">
+  <header class="header-index" id="header">
+</if>
+  
+<if classHeader="header-repos">
+  <header class="header-repos" id="header">    
+</if>
     <nav>
       <div class="title">
         <h3>Federico Sosa</h3>
@@ -11,12 +17,17 @@
         </section>
         <!-- LINKS FOR MOBILE -->
         <section class="links-mob menu-hidden" id="links-mob">
-          <ul>
+          <if classHeader="header-repos">
+            <ul class="color-white">
+          </if>
+          <if classHeader="header-index">
+            <ul>
+          </if>
             <li>
               <a href="index.html/#bg">Home</a>
             </li>
             <li>
-              <a href="repos.html">GitHub Repos</a>
+              <a href="repos.html">GitHub</a>
             </li>
             <li>
               <a href="index.html/#skillsSection">Skills</a>
@@ -30,7 +41,7 @@
       <!-- LINKS FOR PC -->
       <div class="links">
         <a href="index.html#bg">Home</a>
-        <a href="repos.html">GitHub Repos</a>
+        <a href="repos.html">GitHub</a>
         <a href="index.html#skillsSection">Skills</a>
         <a href="index.html#contactSection">Contact</a>
       </div>

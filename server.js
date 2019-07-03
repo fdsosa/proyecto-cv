@@ -19,6 +19,12 @@ server.get('/home', function (req, res) {
   return res.sendFile(path.join(__dirname, folderBuild, 'index.html'));
 });
 
+server.get('/repos', function (req, res) {
+  // console.log('Esta es la raiz de mi sitio');
+  // res.status(200).send('Bienvenido a mi servidor');
+  return res.sendFile(path.join(__dirname, folderBuild, 'repos.html'));
+});
+
 server.listen(port, function () {
   console.log('Mi servidor esta en linea en el puerto ' + port);
 });
