@@ -9,12 +9,79 @@
   <body>
 
     <!-- HEADER SECTION -->
-    <include src="header"></include>
+    <include src="header">
+        <arg classHeader>header-repos</arg>
+    </include>
+
+    <!-- CONTENT SECTION -->
+    <section class="content">
+        <h1>GitHub Repositories</h1><br>
+        <div class="repos-placeholder" id="repos-placeholder">
+            Loading repositories...
+        </div>
+        <!-- DINAMIC SECTION -->
+        <section class="repos d-none" id="repos">
+
+        </section>
+    </section>
 
 
     <!-- FOOTER SECTION -->
     <include src="footer"></include>
 
     <script type="text/javascript" src="script.js"></script>
+    <script>
+        var reqObject = new XMLHttpRequest();
+        reqObject.open("GET", "https://api.github.com/users/fdsosa/repos");
+        reqObject.send();
+
+        reqObject.addEventListener('readystatechange', function(event){
+            var state = reqObject.readyState;
+            var status = reqObject.status;
+            var response = reqObject.response;
+
+            if(state == 4){
+                if(status == 200){
+                    processGitResponse(JSON.parse(response));
+                }
+            }
+        });
+
+        function processGitResponse(gitRepos){
+            var placeHolder = document.getElementById('repos-placeholder');
+            var gitReposContainer = document.getElementById('repos');
+
+            placeHolder.classList.add('d-none');
+            gitReposContainer.classList.remove('d-none')
+
+            for(i = 0; i < gitRepos.length; i++){
+                var gitRepo = gitRepos[i];
+
+                var articleRepoElement = document.createElement('article');
+                articleRepoElement.classList.add('repo');
+
+                var repoTitleElement = document.createElement('h3');
+                var repoTitleText = document.createTextNode(gitRepo.name);
+                repoTitleElement.appendChild(repoTitleText);
+
+                var repoUrlElement = document.createElement('h4');
+                var repoUrlText = document.createTextNode('URL: ');
+                var repoUrlLink = document.createElement('a');
+                var repoUrlLinkText = document.createTextNode(gitRepo.html_url);
+
+                repoUrlLink.setAttribute('href', gitRepo.html_url);  
+                repoUrlLink.setAttribute('target', '_blank');                
+                repoUrlLink.appendChild(repoUrlLinkText);
+                repoUrlElement.appendChild(repoUrlText);
+                repoUrlElement.appendChild(repoUrlLink);
+
+                articleRepoElement.appendChild(repoTitleElement);
+                articleRepoElement.appendChild(repoUrlElement);
+
+                gitReposContainer.appendChild(articleRepoElement);
+            }
+        }
+
+    </script>
   </body>
 </html>    
