@@ -9,7 +9,9 @@
   <body>
 
     <!-- HEADER SECTION -->
-    <include src="header"></include>
+    <include src="header">
+        <arg classHeader>header-index</arg>
+    </include>
 
     <!-- PROFILE SECTION -->
     <section class="background-pic" id="bg">
@@ -29,7 +31,7 @@
             </div>
         </section>
         <!-- SOCIAL BAR MOBILE -->
-        <div class="social-bar social-bar-mobile">
+        <div class="social-bar-mobile">
           <include src="social-networks.html"></include>          
         </div>
       </div>
@@ -42,7 +44,7 @@
       </div>
       <div class="text-present">
         <h2>Hi I´m Federico</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero cupiditate modi delectus numquam veniam dolorem minus minima illum enim quidem vel, rerum possimus ipsa, harum corporis. Quasi perspiciatis, possimus. Dolorum!</p>
+        <p>I´m web developer. I live in Montevideo, Uruguay. I am currently studying a career related to programming. I love what I do, and adore spend time programming.</p>
       </div>
     </section>
 
@@ -60,45 +62,73 @@
         <tfoot>
           <tr>
             <td>Git</td>
-            <td class="cell-progress">
-              <progress class="progress-bar__bar" max="100" value="60"></progress>
-            </td>
+            <td>
+              <div class='prog-bar-cont'>
+                <div class="prog-bar">
+                  <div class="background git"></div>
+                </div>
+              </div>
+            </td>  
           </tr>
           <tr>
             <td>HTML</td>
-            <td class="cell-progress">
-              <progress class="progress-bar__bar" max="100" value="80"></progress>
-            </td>
+            <td>
+              <div class='prog-bar-cont'>
+                <div class="prog-bar">
+                  <div class="background html"></div>
+                </div>
+              </div>
+            </td>  
           </tr>
           <tr>
             <td>CSS</td>
-            <td class="cell-progress">
-              <progress class="progress-bar__bar" max="100" value="74"></progress>
-            </td>
+            <td>
+              <div class='prog-bar-cont'>
+                <div class="prog-bar">
+                  <div class="background css"></div>
+                </div>
+              </div>
+            </td>  
           </tr>
           <tr>
             <td>JS</td>
-            <td class="cell-progress">
-              <progress class="progress-bar__bar" max="100" value="48"></progress>
-            </td>
+            <td>
+              <div class='prog-bar-cont'>
+                <div class="prog-bar">
+                  <div class="background js"></div>
+                </div>
+              </div>
+            </td>  
           </tr>
           <tr>
             <td>PHP</td>
-            <td class="cell-progress">
-              <progress class="progress-bar__bar" max="100" value="56"></progress>
-            </td>
+            <td>
+              <div class='prog-bar-cont'>
+                <div class="prog-bar">
+                  <div class="background php"></div>
+                </div>
+              </div>
+            </td>  
           </tr>
           <tr>
             <td>MySQL</td>
-            <td class="cell-progress">
-              <progress class="progress-bar__bar" max="100" value="71"></progress>
-            </td>
+            <td>
+              <div class='prog-bar-cont'>
+                <div class="prog-bar">
+                  <div class="background mysql"></div>
+                </div>
+              </div>
+            </td>  
           </tr>
           <tr>
             <td>English</td>
-            <td class="cell-progress">
-              <progress class="progress-bar__bar" max="100" value="80"></progress>
-            </td>
+            <td>
+              <div class='prog-bar-cont'>
+                <div class="prog-bar">
+                  <div class="background english"></div>
+                </div>
+              </div>
+            </td>  
           </tr>
         </tfoot>
       </table>

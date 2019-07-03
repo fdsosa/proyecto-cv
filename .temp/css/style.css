@@ -22,13 +22,26 @@ ul {
   padding: 0; }
 
 /* HEADER SECTION */
+.header-index {
+  background: #fff; }
+
+.header-repos {
+  background: #182153; }
+  .header-repos nav .title h3 {
+    color: white; }
+  .header-repos nav .menu-mobile ul li a {
+    color: white; }
+  .header-repos nav .links a {
+    color: white; }
+    .header-repos nav .links a:hover {
+      background-color: #222c64; }
+
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 13vh;
-  background: #fff;
   z-index: 10; }
   header .menu-mobile {
     display: none; }
@@ -94,15 +107,14 @@ header {
   .profile .profile-pic, .profile .profile-info {
     box-sizing: border-box;
     display: inline-block;
-    height: 70%;
     flex: 1;
-    flex-grow: 1; }
-  .profile .profile-pic img {
-    width: 100%;
-    height: 100%; }
+    flex-grow: 1;
+    min-width: 500px;
+    min-height: 500px; }
+  .profile .profile-info {
+    width: 100%; }
   .profile .profile-pic .pic {
     width: 100%;
-    height: 100%;
     filter: grayscale(100%); }
   .profile .profile-info {
     background-color: #fff;
@@ -123,7 +135,7 @@ header {
 /* SOCIAL BAR SECTION */
 .social-bar {
   display: flex;
-  width: 60%;
+  width: 100%;
   height: 8vh;
   justify-content: center;
   align-items: center;
@@ -150,6 +162,8 @@ header {
   text-align: center;
   padding: 100px 32%;
   font-family: "Nunito", sans-serif; }
+  .text-present p {
+    font-size: 20px; }
 
 /* SKILLS SECTION */
 .skills {
@@ -174,19 +188,56 @@ table {
     text-transform: uppercase; }
   table td {
     width: 10%; }
-  table .cell-progress {
-    width: 30%; }
-    table .cell-progress progress {
+  table .prog-bar-cont {
+    width: 100%;
+    height: 2.5em;
+    padding: 0.5em;
+    border-radius: 50px;
+    box-sizing: border-box; }
+    table .prog-bar-cont .prog-bar {
       width: 100%;
-      height: 25px;
-      -webkit-appearance: none; }
-    table .cell-progress progress[value]::-webkit-progress-bar {
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset; }
-    table .cell-progress progress[value]::-webkit-progress-value {
-      background-color: #182153;
-      border-radius: 8px; }
+      height: 100%;
+      border-radius: 50px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 1px 3px rgba(255, 255, 255, 0.75) inset; }
+      table .prog-bar-cont .prog-bar .background {
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        background: #182153;
+        -webkit-clip-path: inset(0 100% 0 0);
+        clip-path: inset(0 100% 0 0);
+        transition: all 2s;
+        -webkit-transition: all 3s; }
+
+.progBar-animate-git {
+  -webkit-clip-path: inset(0 30% 0 0) !important;
+  clip-path: inset(0 30% 0 0) !important; }
+
+.progBar-animate-css {
+  -webkit-clip-path: inset(0 20% 0 0) !important;
+  clip-path: inset(0 20% 0 0) !important; }
+
+.progBar-animate-html {
+  -webkit-clip-path: inset(0 25% 0 0) !important;
+  clip-path: inset(0 25% 0 0) !important; }
+
+.progBar-animate-js {
+  -webkit-clip-path: inset(0 40% 0 0) !important;
+  clip-path: inset(0 40% 0 0) !important; }
+
+.progBar-animate-php {
+  -webkit-clip-path: inset(0 50% 0 0) !important;
+  clip-path: inset(0 50% 0 0) !important; }
+
+.progBar-animate-mysql {
+  -webkit-clip-path: inset(0 40% 0 0) !important;
+  clip-path: inset(0 40% 0 0) !important; }
+
+.progBar-animate-english {
+  -webkit-clip-path: inset(0 20% 0 0) !important;
+  clip-path: inset(0 20% 0 0) !important; }
 
 /* CONTACT SECTION */
 .contact {
@@ -271,6 +322,53 @@ table {
           margin-top: 0; }
           .contact .row-2 .right .social-bar-alt ul li i {
             color: #000; }
+
+/* CONTENT SECTION */
+.content {
+  width: 80%;
+  margin: auto;
+  margin-top: 18vh;
+  margin-bottom: 18vh;
+  text-align: center; }
+  .content h1 {
+    font-family: 'Sarabun', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500; }
+  .content .repos-placeholder {
+    width: 75%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #cfcfcf;
+    font-size: 20px;
+    font-family: "Hind", sans-serif; }
+  .content .repos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 3em;
+    grid-row-gap: 2em; }
+    .content .repos .repo {
+      background-color: #F1F1F1;
+      border: 2px solid #e4dfdf;
+      border-radius: 5px;
+      text-align: left;
+      padding: 0.5em 2.5em;
+      transition: all 0.2s ease; }
+      .content .repos .repo:hover {
+        background-color: #b9b9b9;
+        transform: scale(1.1);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+        z-index: 1; }
+      .content .repos .repo h4 {
+        color: #182153; }
+        .content .repos .repo h4 a {
+          color: #182153; }
+      .content .repos .repo h3 {
+        color: #182153; }
+
+/* HELPERS CLASSES */
+.d-none {
+  display: none !important; }
 
 /* RESPONSIVE  */
 @media screen and (max-width: 1000px) {

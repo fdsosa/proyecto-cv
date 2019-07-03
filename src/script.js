@@ -42,3 +42,59 @@ function hideMenu(){
     mobile_menu.classList.add('d-none')
   }
 }
+
+
+//DISPLAY BARS
+function isVisible(elem) {
+
+  let coords = elem.getBoundingClientRect();
+
+  let windowHeight = document.documentElement.clientHeight;
+
+  let topVisible = coords.top > 0 && coords.top < windowHeight;
+  let bottomVisible = coords.bottom < windowHeight && coords.bottom > 0;
+
+  return topVisible || bottomVisible;
+}
+
+function showVisible() {
+  for (let progBar of document.getElementsByClassName('background')) {
+
+    console.log('progbar');
+
+    if (isVisible(progBar)) {
+      
+      if(progBar.classList.contains('git')){
+        progBar.classList.add('progBar-animate-git');
+      }
+
+      if(progBar.classList.contains('html')){
+        progBar.classList.add('progBar-animate-html');
+      }
+
+      if(progBar.classList.contains('css')){
+        progBar.classList.add('progBar-animate-css');
+      }
+
+      if(progBar.classList.contains('js')){
+        progBar.classList.add('progBar-animate-js');
+      }
+
+      if(progBar.classList.contains('php')){
+        progBar.classList.add('progBar-animate-php');
+      }
+
+      if(progBar.classList.contains('mysql')){
+        progBar.classList.add('progBar-animate-mysql');
+      }
+
+      if(progBar.classList.contains('english')){
+        progBar.classList.add('progBar-animate-english');
+      }
+    }
+  }
+
+}
+
+window.addEventListener('scroll', showVisible);
+showVisible();

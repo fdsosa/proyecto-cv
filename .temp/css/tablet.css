@@ -1,0 +1,31 @@
+.background-pic .profile {
+  display: flex;
+  width: 60%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: absolute; }
+  .background-pic .profile .profile-pic, .background-pic .profile .profile-info {
+    box-sizing: border-box;
+    display: inline-block;
+    flex: 1;
+    flex-grow: 1;
+    width: 400px;
+    min-width: 300px;
+    min-height: 300px; }
+  .background-pic .profile .profile-info {
+    padding: 0px 60px; }
+    .background-pic .profile .profile-info .content-info {
+      padding-left: 0px; }
+
+/* SOCIAL BAR SECTION */
+.social-bar {
+  display: flex;
+  width: 100%;
+  height: 8vh;
+  justify-content: center;
+  align-items: center; }
+
+.social-bar-mobile {
+  display: none; }

@@ -1,0 +1,39 @@
+@import 'variables';
+@import 'mixins';
+
+.background-pic{
+  
+    .profile{
+        @include size(flex, 60%, 100%, center, center); 
+        margin: auto;
+        position: absolute;
+  
+        .profile-pic,  .profile-info{
+            box-sizing: border-box;
+            display: inline-block;
+            flex: 1;
+            flex-grow: 1;
+            width: 400px;
+            min-width: 300px;
+            min-height: 300px;
+
+        }
+
+        .profile-info{
+            padding: 0px 60px;
+
+            .content-info{
+                padding-left: 0px;
+            }         
+        }
+    }    
+}    
+
+/* SOCIAL BAR SECTION */
+.social-bar{
+    @include size(flex, 100%, 8vh, center, center); 
+}    
+
+.social-bar-mobile{
+    display: none;
+}

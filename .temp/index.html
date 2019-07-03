@@ -8,7 +8,10 @@
     <title>Mi web personal - Federico Sosa</title>
     <!-- Template: Head Styles -->
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/tablet.css" media="(max-width: 1070px)">
 <link rel="stylesheet" href="css/responsive.css" media="(max-width: 685px)">
+<link rel="stylesheet" href="css/mobile.css" media="(max-width: 500px)">
+
     <!-- Template: Head Frameworks-->
 <link href="https://fonts.googleapis.com/css?family=Assistant:300|Roboto|Lato:300|Hind|Sarabun:500|Nunito" rel="stylesheet">
 <!-- ICONS -->
@@ -21,7 +24,9 @@ crossorigin="anonymous">
 
     <!-- HEADER SECTION -->
     <!-- Template: Header -->
-<header id="header">
+<header class="header-index" id="header">
+  
+
     <nav>
       <div class="title">
         <h3>Federico Sosa</h3>
@@ -33,12 +38,13 @@ crossorigin="anonymous">
         </section>
         <!-- LINKS FOR MOBILE -->
         <section class="links-mob menu-hidden" id="links-mob">
+          
           <ul>
             <li>
               <a href="index.html/#bg">Home</a>
             </li>
             <li>
-              <a href="portfolio.html">Portfolio</a>
+              <a href="repos.html">GitHub</a>
             </li>
             <li>
               <a href="index.html/#skillsSection">Skills</a>
@@ -52,12 +58,13 @@ crossorigin="anonymous">
       <!-- LINKS FOR PC -->
       <div class="links">
         <a href="index.html#bg">Home</a>
-        <a href="portfolio.html">Portfolio</a>
+        <a href="repos.html">GitHub</a>
         <a href="index.html#skillsSection">Skills</a>
         <a href="index.html#contactSection">Contact</a>
       </div>
     </nav>
   </header>
+
 
     <!-- PROFILE SECTION -->
     <section class="background-pic" id="bg">
@@ -77,21 +84,22 @@ crossorigin="anonymous">
             </div>
         </section>
         <!-- SOCIAL BAR MOBILE -->
-        <div class="social-bar social-bar-mobile">
-          <ul>
-            <li>
-              <a href=""><i class="fab fa-linkedin-in"></i></a>
-            </li>
-            <li>
-              <a href=""><i class="fab fa-facebook-f"></i></a>
-            </li>
-            <li>
-              <a href=""><i class="fab fa-github-alt"></i></a>
-            </li>
-            <li>
-              <a href=""><i class="fab fa-instagram"></i></a>
-            </li>
-          </ul>
+        <div class="social-bar-mobile">
+          <!-- Template: Social Networks -->
+<ul>
+    <li>
+        <a href="https://www.linkedin.com/in/federico-sosa-026685153/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </li>
+    <li>
+        <a href="https://www.facebook.com/fede.gorsac35?ref=bookmarks" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    </li>
+    <li>
+        <a href="https://github.com/fdsosa" target="_blank"><i class="fab fa-github-alt"></i></a>
+    </li>
+    <li>
+        <a href="https://www.instagram.com/gorsac/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </li>
+</ul>          
         </div>
       </div>
     </section>
@@ -99,24 +107,25 @@ crossorigin="anonymous">
     <!-- PRESENTATION SECTION -->
     <section class="presentation">
       <div class="social-bar">
-        <ul>
-          <li>
-            <a href=""><i class="fab fa-linkedin-in"></i></a>
-          </li>
-          <li>
-            <a href=""><i class="fab fa-facebook-f"></i></a>
-          </li>
-          <li>
-            <a href=""><i class="fab fa-github-alt"></i></a>
-          </li>
-          <li>
-            <a href=""><i class="fab fa-instagram"></i></a>
-          </li>
-        </ul>
+        <!-- Template: Social Networks -->
+<ul>
+    <li>
+        <a href="https://www.linkedin.com/in/federico-sosa-026685153/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </li>
+    <li>
+        <a href="https://www.facebook.com/fede.gorsac35?ref=bookmarks" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    </li>
+    <li>
+        <a href="https://github.com/fdsosa" target="_blank"><i class="fab fa-github-alt"></i></a>
+    </li>
+    <li>
+        <a href="https://www.instagram.com/gorsac/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </li>
+</ul>
       </div>
       <div class="text-present">
         <h2>Hi I´m Federico</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero cupiditate modi delectus numquam veniam dolorem minus minima illum enim quidem vel, rerum possimus ipsa, harum corporis. Quasi perspiciatis, possimus. Dolorum!</p>
+        <p>I´m web developer. I live in Montevideo, Uruguay. I am currently studying a career related to programming. I love what I do, and adore spend time programming.</p>
       </div>
     </section>
 
@@ -134,31 +143,73 @@ crossorigin="anonymous">
         <tfoot>
           <tr>
             <td>Git</td>
-            <td class="cell-progress"><progress max="100" value="60"></progress></td>
+            <td>
+              <div class='prog-bar-cont'>
+                <div class="prog-bar">
+                  <div class="background git"></div>
+                </div>
+              </div>
+            </td>  
           </tr>
           <tr>
             <td>HTML</td>
-            <td class="cell-progress"><progress max="100" value="80"></progress></td>
+            <td>
+              <div class='prog-bar-cont'>
+                <div class="prog-bar">
+                  <div class="background html"></div>
+                </div>
+              </div>
+            </td>  
           </tr>
           <tr>
             <td>CSS</td>
-            <td class="cell-progress"><progress max="100" value="74"></progress></td>
+            <td>
+              <div class='prog-bar-cont'>
+                <div class="prog-bar">
+                  <div class="background css"></div>
+                </div>
+              </div>
+            </td>  
           </tr>
           <tr>
             <td>JS</td>
-            <td class="cell-progress"><progress max="100" value="48"></progress></td>
+            <td>
+              <div class='prog-bar-cont'>
+                <div class="prog-bar">
+                  <div class="background js"></div>
+                </div>
+              </div>
+            </td>  
           </tr>
           <tr>
             <td>PHP</td>
-            <td class="cell-progress"><progress max="100" value="56"></progress></td>
+            <td>
+              <div class='prog-bar-cont'>
+                <div class="prog-bar">
+                  <div class="background php"></div>
+                </div>
+              </div>
+            </td>  
           </tr>
           <tr>
             <td>MySQL</td>
-            <td class="cell-progress"><progress max="100" value="71"></progress></td>
+            <td>
+              <div class='prog-bar-cont'>
+                <div class="prog-bar">
+                  <div class="background mysql"></div>
+                </div>
+              </div>
+            </td>  
           </tr>
           <tr>
             <td>English</td>
-            <td class="cell-progress"><progress max="100" value="80"></progress></td>
+            <td>
+              <div class='prog-bar-cont'>
+                <div class="prog-bar">
+                  <div class="background english"></div>
+                </div>
+              </div>
+            </td>  
           </tr>
         </tfoot>
       </table>
@@ -188,20 +239,21 @@ crossorigin="anonymous">
           </ul>
           <hr>
           <div class="social-bar-alt">
-            <ul>
-              <li>
-                <a href=""><i class="fab fa-linkedin-in"></i></a>
-              </li>
-              <li>
-                <a href=""><i class="fab fa-facebook-f"></i></a>
-              </li>
-              <li>
-                <a href=""><i class="fab fa-github-alt"></i></a>
-              </li>
-              <li>
-                <a href=""><i class="fab fa-instagram"></i></a>
-              </li>
-            </ul>
+            <!-- Template: Social Networks -->
+<ul>
+    <li>
+        <a href="https://www.linkedin.com/in/federico-sosa-026685153/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </li>
+    <li>
+        <a href="https://www.facebook.com/fede.gorsac35?ref=bookmarks" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    </li>
+    <li>
+        <a href="https://github.com/fdsosa" target="_blank"><i class="fab fa-github-alt"></i></a>
+    </li>
+    <li>
+        <a href="https://www.instagram.com/gorsac/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </li>
+</ul>
           </div>
       </div>
     </aside>
