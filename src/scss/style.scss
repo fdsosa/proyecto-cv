@@ -156,20 +156,27 @@ header{
     flex-grow: 1;
     min-width: 500px;
     min-height: 500px;
+    opacity: 0;
+    transition: all 2s ease;
   }
 
   .profile-info{
     width: 100%;
+    transform: translateX(50px);
   }
 
   .profile-pic{
-    img{
-    }
+    transform: translateX(-50px);
 
     .pic{
       width: 100%;
       filter: grayscale(100%);
     }
+  }
+
+  .profile-animation{
+    opacity: 1;
+    transform: translateX(0);
   }
 
   .profile-info{

@@ -98,3 +98,14 @@ function showVisible() {
 
 window.addEventListener('scroll', showVisible);
 showVisible();
+
+//ANIMATION PROFILE
+let boxPic = document.getElementById('pic');
+let boxInfo = document.getElementById('info');
+
+function animationProfile(){
+  boxInfo.classList.add('profile-animation');
+  boxPic.classList.add('profile-animation');
+}
+
+window.addEventListener('load', animationProfile);
