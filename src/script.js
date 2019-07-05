@@ -94,10 +94,18 @@ function showVisible() {
     }
   }
 
+  //SOCIAL BAR ANIMATION
   let socialBar = document.getElementById('social');
 
   if (isVisible(socialBar)) {
     socialBar.classList.add('social-bar-animation');
+  }  
+
+  //TEXT PRESENTATION ANIMATION
+  let txt = document.getElementById('txt');
+
+  if (isVisible(txt)) {
+    txt.classList.add('text-present-animation');
   }  
 }
 
