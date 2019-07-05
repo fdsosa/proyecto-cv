@@ -94,6 +94,11 @@ function showVisible() {
     }
   }
 
+  let socialBar = document.getElementById('social');
+
+  if (isVisible(socialBar)) {
+    socialBar.classList.add('social-bar-animation');
+  }  
 }
 
 window.addEventListener('scroll', showVisible);

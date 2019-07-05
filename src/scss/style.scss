@@ -203,9 +203,10 @@ header{
 
 /* SOCIAL BAR SECTION */
 .social-bar{
-  @include size(flex, 100%, 8vh, center, center); 
+  @include size(flex, 100%, 0, center, center); 
   margin: auto;
   background-color: $primary-color;
+  transition: all 800ms ease;
 
   ul{
     display: flex;
@@ -218,6 +219,10 @@ header{
       }
     }
   }
+}
+
+.social-bar-animation{
+  height: 8vh;
 }
 
 .social-bar-mobile{
@@ -258,6 +263,16 @@ header{
 table{
   width: 60%;
   margin: 40px auto;
+  border-spacing: 0;
+
+  tfoot{
+
+    tr{
+      &:hover{
+        background-color: #f1f1f1eb;
+      }
+    }
+  }
   
   th, td{
     padding: 17px;
