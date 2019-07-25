@@ -156,20 +156,27 @@ header{
     flex-grow: 1;
     min-width: 500px;
     min-height: 500px;
+    opacity: 0;
+    transition: all 2s ease;
   }
 
   .profile-info{
     width: 100%;
+    transform: translateX(50px);
   }
 
   .profile-pic{
-    img{
-    }
+    transform: translateX(-50px);
 
     .pic{
       width: 100%;
       filter: grayscale(100%);
     }
+  }
+
+  .profile-animation{
+    opacity: 1;
+    transform: translateX(0);
   }
 
   .profile-info{
@@ -196,9 +203,10 @@ header{
 
 /* SOCIAL BAR SECTION */
 .social-bar{
-  @include size(flex, 100%, 8vh, center, center); 
+  @include size(flex, 100%, 0, center, center); 
   margin: auto;
   background-color: $primary-color;
+  transition: all 800ms ease;
 
   ul{
     display: flex;
@@ -211,6 +219,10 @@ header{
       }
     }
   }
+}
+
+.social-bar-animation{
+  height: 8vh;
 }
 
 .social-bar-mobile{
@@ -227,10 +239,16 @@ header{
   text-align: center;
   padding: 100px 32%;
   font-family: $principal-font;
+  opacity: 0;
+  transition: all 3s ease;
 
   p{
     font-size: 20px;
   }
+}
+
+.text-present-animation{
+  opacity: 1;
 }
 
 /* SKILLS SECTION */
@@ -251,6 +269,16 @@ header{
 table{
   width: 60%;
   margin: 40px auto;
+  border-spacing: 0;
+
+  tfoot{
+
+    tr{
+      &:hover{
+        background-color: #f1f1f1eb;
+      }
+    }
+  }
   
   th, td{
     padding: 17px;
@@ -378,6 +406,9 @@ table{
 
           &:hover{
             cursor: pointer;
+            transform: translate(-.1em,-.1em) ;
+            background-color: #0d1540;
+            box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.4);
           }
         }
 

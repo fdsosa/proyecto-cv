@@ -2,8 +2,6 @@ var menu_button = document.getElementById('bg-bars');
     menu_button.addEventListener('click', toggleMenu);
 
 var mobile_menu = document.getElementById('links-mob');
-    mobile_menu.addEventListener('transitionstart', showMenu);
-    mobile_menu.addEventListener('transitionend', hideMenu);
 
 var sectionProfile = document.getElementById("bg");
 var bars = document.getElementById("bars");
@@ -28,18 +26,6 @@ function toggleMenu() {
     menu_button.classList.remove('bar-active');
     menu_button.classList.add('bar-inactive');
     bars.style.color = "#182153";
-  }
-}
-
-function showMenu(){
-  if (mobile_menu.classList.contains('menu-visible')) {
-    mobile_menu.classList.remove('d-none')
-  }
-}
-
-function hideMenu(){
-  if (mobile_menu.classList.contains('menu-hidden')) {
-    mobile_menu.classList.add('d-none')
   }
 }
 
@@ -94,7 +80,31 @@ function showVisible() {
     }
   }
 
+  //SOCIAL BAR ANIMATION
+  let socialBar = document.getElementById('social');
+
+  if (isVisible(socialBar)) {
+    socialBar.classList.add('social-bar-animation');
+  }  
+
+  //TEXT PRESENTATION ANIMATION
+  let txt = document.getElementById('txt');
+
+  if (isVisible(txt)) {
+    txt.classList.add('text-present-animation');
+  }  
 }
 
 window.addEventListener('scroll', showVisible);
 showVisible();
+
+//ANIMATION PROFILE
+let boxPic = document.getElementById('pic');
+let boxInfo = document.getElementById('info');
+
+function animationProfile(){
+  boxInfo.classList.add('profile-animation');
+  boxPic.classList.add('profile-animation');
+}
+
+window.addEventListener('load', animationProfile);
