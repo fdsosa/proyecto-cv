@@ -9,7 +9,7 @@
     
     .links-mob{
       background: #181739f0;
-      transition: height .5s ease;
+      transition: all .5s ease;
 
       ul{
         width: 70%;
@@ -90,7 +90,7 @@ header{
       align-items: flex-start;
       justify-content: center;
       text-align: center;
-      transition: opacity .5s ease, height .5s ease;
+      transition: all .3s ease;
 
       ul{
         width: 70%;

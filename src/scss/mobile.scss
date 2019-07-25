@@ -1,3 +1,11 @@
+/* HEADER */
+header{
+  
+    h3{
+      font-size: 20px;
+    }
+}
+
 /* PROFILE SECTION */
 .background-pic{
   
@@ -19,3 +27,31 @@
     min-width: 250px;
     margin: 0;
 }    
+
+/* REPO SECTION */
+
+.content{
+    width: 90%;
+  
+    .repos-placeholder{
+      width: 80%;
+      padding: 15px;
+    }
+  
+    .repos{
+  
+      .repo{
+        padding: 0.5em .5em;
+
+        h4{
+            margin-bottom: 5px;
+            font-size: 12px;
+        }
+  
+        h3{
+            margin-top: 5px;
+            font-size: 12px;
+        }
+      }
+    }
+}       
