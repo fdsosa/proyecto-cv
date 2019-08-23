@@ -1,11 +1,13 @@
 var express = require('express');
 var server = express();
+var cors = require('cors')
 var path = require('path');
 var port = process.env.PORT || 8080;
 var env = process.env.ENV || 'DEV';
 var folderBuild = env == 'PROD' ? '/dist/' : '/.temp/';
 
 server.use(express.static(path.join(__dirname, folderBuild)));
+server.use(cors());
 
 server.get('/', function (req, res) {
   // console.log('Esta es la raiz de mi sitio');

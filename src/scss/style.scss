@@ -201,28 +201,8 @@ header{
   }
 }
 
-/* SOCIAL BAR SECTION */
-.social-bar{
-  @include size(flex, 100%, 0, center, center); 
-  margin: auto;
-  background-color: $primary-color;
-  transition: all 800ms ease;
-
-  ul{
-    display: flex;
-    li{
-      margin: 20px 10px;
-      a{
-        padding: 5px 15px;
-        font-size: 22px;
-        color: $bg-color-1;
-      }
-    }
-  }
-}
-
 .social-bar-animation{
-  height: 8vh;
+  height: 8vh !important;
 }
 
 .social-bar-mobile{
@@ -233,6 +213,26 @@ header{
 /* PRESENTATION SECTION */
 .presentation{
   background-color: $bg-color-2;
+
+  /* SOCIAL BAR SECTION */
+  .social-bar{
+    @include size(flex, 100%, 0, center, center); 
+    margin: auto;
+    background-color: $primary-color;
+    transition: all 800ms ease;
+
+    ul{
+      display: flex;
+      li{
+        margin: 20px 10px;
+        a{
+          padding: 5px 15px;
+          font-size: 22px;
+          color: $bg-color-1;
+        }
+      }
+    }
+  }
 }
 
 .text-present{
@@ -313,48 +313,12 @@ table{
           height: 100%;
           border-radius: 50px;
           background: $primary-color;
-         -webkit-clip-path: inset(0 100% 0 0);
-          clip-path: inset(0 100% 0 0);
          transition: all 2s;
          -webkit-transition: all 3s;
+         clip-path: inset(0 0 0 0);
       }
     }
   }
-}
-
-.progBar-animate-git{
-  -webkit-clip-path: inset(0 30% 0 0) !important;
-  clip-path: inset(0 30% 0 0) !important;
-}
-
-.progBar-animate-css{
-  -webkit-clip-path: inset(0 20% 0 0) !important;
-  clip-path: inset(0 20% 0 0) !important;
-}
-
-.progBar-animate-html{
-  -webkit-clip-path: inset(0 25% 0 0) !important;
-  clip-path: inset(0 25% 0 0) !important;
-}
-
-.progBar-animate-js{
-  -webkit-clip-path: inset(0 40% 0 0) !important;
-  clip-path: inset(0 40% 0 0) !important;
-}
-
-.progBar-animate-php{
-  -webkit-clip-path: inset(0 50% 0 0) !important;
-  clip-path: inset(0 50% 0 0) !important;
-}
-
-.progBar-animate-mysql{
-  -webkit-clip-path: inset(0 40% 0 0) !important;
-  clip-path: inset(0 40% 0 0) !important;
-}
-
-.progBar-animate-english{
-  -webkit-clip-path: inset(0 20% 0 0) !important;
-  clip-path: inset(0 20% 0 0) !important;
 }
 
 /* CONTACT SECTION */

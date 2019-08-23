@@ -43,10 +43,9 @@ function isVisible(elem) {
   return topVisible || bottomVisible;
 }
 
-function showVisible() {
-  for (let progBar of document.getElementsByClassName('background')) {
 
-    console.log('progbar');
+function showVisible() {
+  /* for (let progBar of document.getElementsByClassName('background')) {
 
     if (isVisible(progBar)) {
       
@@ -78,10 +77,10 @@ function showVisible() {
         progBar.classList.add('progBar-animate-english');
       }
     }
-  }
+  } */
 
   //SOCIAL BAR ANIMATION
-  let socialBar = document.getElementById('social');
+  let socialBar = document.getElementById('socialContainer');
 
   if (isVisible(socialBar)) {
     socialBar.classList.add('social-bar-animation');
@@ -96,7 +95,6 @@ function showVisible() {
 }
 
 window.addEventListener('scroll', showVisible);
-showVisible();
 
 //ANIMATION PROFILE
 let boxPic = document.getElementById('pic');
